@@ -1,0 +1,105 @@
+<html>
+    <head>
+        <title>
+            DivItup
+        </title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="myFunction.js"></script>
+
+    </head>
+    <body>
+          <!--Nav bar-->
+        <div class="topnav" id="myTopnav"> 
+            <a href="#home" class="openbtn" onclick="sideAccess()" ><img src="images/Group 5.png" alt=""></a><!--Show sidebar menu button-->
+            <label class="logo">DivItUp</label><!--Logo-->
+            <!--Navbar element on left-->
+            <li class="options"><a href="#home" ><img src="images/Ellipse 1.png" alt=""></a></li>
+            <li class="options"><a href="#home" ><img src="images/Notifications.png" alt=""></a></li>
+            <li class="options"><a href="#home" ><img src="images/Settings.png" alt=""></a></li>
+            
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()"><!--hover function-->
+              <i class="fa fa-bars"></i>
+            </a>
+          </div>
+
+          
+
+
+           <!--Side bar-->
+          <div id="mySidebar" class="sidebar">
+            <form class="example" action="/action_page.php">
+                <input type="text" placeholder="Search.." name="search">
+                <button type="submit"><i class="fa fa-search"></i></button>
+              </form>
+            <a href="#">Dashboard</a>
+            <a href="myWorks.html">My Works</a>
+            <a href="#">Projects</a>
+            <a href="#">People</a>
+          </div>
+             <!--Side bar-->
+              
+             <!--Main Body-->
+          <div id="main">
+            <h1>My Works</h1>
+
+            <div class="tab">
+                <button class="tablinks" onclick="openTab(event, 'To Do')">To Do</button>
+                <button class="tablinks" onclick="openTab(event, 'Ongoing')">Ongoing</button>
+                <button class="tablinks" onclick="openTab(event, 'Completed')">Completed</button>
+                <button class="tablinks" onclick="openTab(event, 'Overdue')">Overdue</button>
+              </div>
+              
+              <div id="To Do" class="tabcontent">
+                <table id="content">
+                    <tr>
+                      <th>Tasks</th>
+                      <th>Dealine</th>
+                      <th>Assignee</th>
+                    </tr> 
+                  </table>
+                  <label class="date">Today</label>  
+
+              </div>
+              
+              <div id="Ongoing" class="tabcontent">
+                <table id="content">
+                    <tr>
+                      <th>Tasks</th>
+                      <th>Dealine</th>
+                      <th>Assignee</th>
+                    </tr> 
+                  </table>
+               
+              </div>
+              
+              <div id="Completed" class="tabcontent">
+                <table id="content">
+                    <tr>
+                      <th>Tasks</th>
+                      <th>Dealine</th>
+                      <th>Assignee</th>
+                    </tr> 
+                  </table>
+             
+              </div>
+
+              <div id="Overdue" class="tabcontent">
+                <table id="content">
+                    <tr>
+                      <th>Tasks</th>
+                      <th>Dealine</th>
+                      <th>Assignee</th>
+                    </tr> 
+                  </table>
+                    
+              </div>
+
+
+          </div>
+
+    </body>
+</html>
