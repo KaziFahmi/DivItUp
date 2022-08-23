@@ -24,28 +24,26 @@
     <div class="tab">
         <button class="tablinks" onclick="openTab(event, 'Recent')">Recent Projects</button>
         <button class="tablinks" onclick="openTab(event, 'Completed')">Completed Projects</button>
-        <button class="tablinks" onclick="openTab(event, 'Completed')">Create Project +</button>
+        <button class="createProject" >Create Project +</button>
        
       </div>
       
       <div id="Recent" class="tabcontent">
-        <table id="content">
-            <tr>
-              <th>Projects</th>
-              <th>Assignee</th>
-            </tr> 
-          </table>
-          <label class="date">Today</label>  
-
+          <div><button class="projectTable" ><label class="prL" >Project </label><label class="prR">Lead </label> </button> </div>
+          <div><button class="projectDataButton" onclick="location.href = 'index.html'"><label >Wedding Ceremony </label> <img src="images/Ellipse 1.png" alt="lead profile image" class="profileImage"></button> </div>
+          
+          <div><button class="peopleDataButton"><img src="images/Ellipse 1.png" alt="lead profile image" class="peopleImage"><label class="nameUser" >Shahil </label> </button>  </div>
+          
       </div>
       
       <div id="Completed" class="tabcontent">
         <table id="content">
             <tr>
                 <th>Projects</th>
-                <th>Assignee</th>
+                <th>Lead</th>
             </tr> 
           </table>
+         
        
       </div>
 
