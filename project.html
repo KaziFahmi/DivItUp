@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>
+            DivItup
+        </title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="myFunction.js"></script>
+        <script src="http://www.w3schools.com/lib/w3data.js"></script>
+    </head>
+    <body>
+        <div w3-include-html="navbar.html"></div> 
+
+        <script>
+          w3IncludeHTML();
+        </script>
+
+<div id="main">
+    <h1>Projects</h1>
+
+    <div class="tab">
+        <button class="tablinks" onclick="openTab(event, 'Recent')">Recent Projects</button>
+        <button class="tablinks" onclick="openTab(event, 'Completed')">Completed Projects</button>
+        <button class="tablinks" onclick="openTab(event, 'Completed')">Create Project +</button>
+       
+      </div>
+      
+      <div id="Recent" class="tabcontent">
+        <table id="content">
+            <tr>
+              <th>Projects</th>
+              <th>Assignee</th>
+            </tr> 
+          </table>
+          <label class="date">Today</label>  
+
+      </div>
+      
+      <div id="Completed" class="tabcontent">
+        <table id="content">
+            <tr>
+                <th>Projects</th>
+                <th>Assignee</th>
+            </tr> 
+          </table>
+       
+      </div>
+
+
+  </div>
+      
+
+
+    </body>
+</html>
