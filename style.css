@@ -12,7 +12,7 @@ body {
   }
   label.logo{
     font-family: 'Baloo Bhai 2', cursive;
-    font-size: 32px;
+    font-size: 30px;
     color: #076A96 ;
   }
 
@@ -103,6 +103,7 @@ body {
   /* When you mouse over the navigation links, change their color */
   .sidebar a:hover {
     border-bottom: 1px solid #076A96;
+    text-decoration: none;
   }
   
   /* Position and style the close button (top right corner) */
@@ -122,7 +123,7 @@ body {
     cursor: pointer;
     background-color: rgb(255, 255, 255);
     color: white;
-    padding: 10px 15px;
+    padding: 14px 16px;
     border: none;
   }
   
@@ -165,6 +166,7 @@ body {
     border: 1px solid grey;
     border-left: none;
     cursor: pointer;
+    height: 45px;
   }
   
   form.example button:hover {
@@ -206,7 +208,7 @@ body {
   outline: none;
   cursor: pointer;
   padding: 14px 16px;
-  transition: 0.3s;
+  transition: 0s;
   font-size: 17px;
 }
 .tablinks{
@@ -214,7 +216,7 @@ body {
 }
 /* Change background color of buttons on hover */
 .tablinks:hover {
-    border-bottom: 2px solid #076A96;
+    border-bottom: 2px solid #91deff;
 }
 
 /* Create an active/current tablink class */
@@ -300,7 +302,8 @@ body {
 }
 
 .profileImage{
-  float: right;
+  float: left;
+  padding-right: 10px;
 }
 
 .peopleImage{
@@ -316,7 +319,7 @@ body {
 .peopleDataButton{
   align-content: center ;
   height: 50px;
-  width: 70%;
+  width: 100%;
   text-align: left;
   font-size: 25;
   background-color: #ffffff;
@@ -327,15 +330,31 @@ body {
   background-color: #6767677c;
 }
 
-.projectTable{
+.projectTableHeader{
   height: 50px;
-  width: 70%;
+  width: 100%;
   text-align: left;
   font-size: 20px;
   background-color: #ffffff;
-  border: #ffffff;
+  border: #881818;
 }
 
-.prR{
-  float:right;
+.WorkTableHeader{
+  height: 50px;
+  width: 100%;
+  text-align: left;
+  font-size: 20px;
+  background-color: #ffffff;
+  border: #881818;
 }
+
+.WorkTableContent{
+  height: 50px;
+  width: 100%;
+  text-align: left;
+  font-size: 20px;
+  border: #000000;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+

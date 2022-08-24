@@ -17,9 +17,9 @@ function myFunction() {
     document.getElementById("mySidebar").style.width = "0";
     document.getElementById("main").style.marginLeft = "0";
   }
-
-  function sideAccess(T){
-    t = T;
+var t = 0;
+  function sideAccess(){
+    
     if(t==0){
       openNav()
       t=1;
