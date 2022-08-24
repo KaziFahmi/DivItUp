@@ -20,7 +20,7 @@
         
         
     </head>
-    <body onload="openTab(event, 'Recent')">
+    <body onload="openTab(event, 'Task_Structure')">
         <div w3-include-html="navbar.html"></div> 
 
         <script>
@@ -31,13 +31,49 @@
     <h1>Wedding Ceremony</h1>
 
     <div class="tab">
-        <button class="tablinks" onclick="openTab(event, 'Recent')">Recent Projects</button>
-        <button class="tablinks" onclick="openTab(event, 'Completed')">Completed Projects</button>
-        <button class="createProject" >Create Project +</button>
+        <button class="tablinks" onclick="openTab(event, 'Task_Structure')">Task Structure</button>
+        <button class="tablinks" onclick="openTab(event, 'Board')">Board</button>
+        <button class="tablinks" onclick="openTab(event, 'Team')">Team</button>
+        <button class="tablinks" onclick="openTab(event, 'Expense')">Expense</button>
+        <button class="tablinks" onclick="openTab(event, 'Documents')">Documents</button>
        
       </div>
-      
-      <div id="Recent" class="tabcontent">
+      <div id="Task_Structure" class="tabcontent">
+        <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col">Tasks</th>
+                <th  scope="col">Subtasks</th>
+                <th  scope="col">Deadline</th>
+                <th  scope="col">Assignee</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr onclick="window.location='index.html'">
+                <tr><td>Setup</td>
+                    <td>Caterer Contact</td><td>10/09/2022</td>
+                    <td><img src="images/Ellipse 1.png" alt="lead profile image" class="profileImage"></td>
+                </tr>
+                <tr><td></td>
+                    <td>Venue Contact</td>
+                    <td>08/09/2022</td><td><img src="images/Ellipse 1.png" alt="lead profile image" class="profileImage"></td></tr>
+              </tr>
+              <tr onclick="window.location='index.html'">
+                <tr><td>Decoration</td>
+                    <td>Design</td><td>10/09/2022</td>
+                    <td><img src="images/Ellipse 1.png" alt="lead profile image" class="profileImage"></td>
+                </tr>
+                <tr><td></td>
+                    <td>Lights</td>
+                    <td>08/09/2022</td><td><img src="images/Ellipse 1.png" alt="lead profile image" class="profileImage"></td></tr>
+              </tr>
+            </tbody>
+          </table>
+       
+      </div>
+
+
+      <div id="Board" class="tabcontent"> <script>// korinai</script>
         <table class="table table-hover">
             <thead>
               <tr>
@@ -57,30 +93,234 @@
               
             </tbody>
           </table>
+       
       </div>
-      
-      <div id="Completed" class="tabcontent">
+
+
+      <div id="Team" class="tabcontent">
+        <div class="tab">
+            <button class="tablinks" onclick="openTab(event, 'Team Overview')">Team Overview</button>
+            <button class="tablinks" onclick="openTab(event, 'Shifts')">Shifts</button>
+            <button class="tablinks" onclick="openTab(event, 'Active Status')">Active Status</button>
+        </div>
+
+
+        <div id="Team Overview" class="tabcontent">
+            <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col">Team Member</th>
+                    <th scope="col">Department</th>
+                    <th scope="col">Attendance</th>
+                    <th scope="col">Total Tasks Assigned</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr onclick="window.location='index.html'">
+                    <td><img src="images/Ellipse 1.png" alt="lead profile image" class="profileImage"></td>
+                    <td>Shahil Yasar Haque</td>
+                    <td>Dev</td>
+                    <td>10/12</td>
+                    <td>3</td>
+                  </tr>
+                  <tr onclick="window.location='index.html'">
+                    <td><img src="images/Ellipse 1.png" alt="lead profile image" class="profileImage"></td>
+                    <td>Kazi Mohammad Fahmi</td>
+                    <td>HR</td>
+                    <td>12/12</td>
+                    <td>2</td>
+                  </tr>
+                  <tr onclick="window.location='index.html'">
+                    <td><img src="images/Ellipse 1.png" alt="lead profile image" class="profileImage"></td>
+                    <td>Eashrat Jahan Anne</td>
+                    <td>PR</td>
+                    <td>11/12</td>
+                    <td>3</td>
+                  </tr>
+                  
+                </tbody>
+              </table>
+        </div>
+
+
+        <div id="Shifts" class="tabcontent">
+            <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col">Team Member</th>
+                    <th scope="col">Start Shift</th>
+                    <th scope="col">End Shift</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr onclick="window.location='index.html'">
+                    <td><img src="images/Ellipse 1.png" alt="lead profile image" class="profileImage"></td>
+                    <td>Shahil Yasar Haque</td>
+                    <td>00:00</td>
+                    <td>00:00</td>
+                  </tr>
+                  <tr onclick="window.location='index.html'">
+                    <td><img src="images/Ellipse 1.png" alt="lead profile image" class="profileImage"></td>
+                    <td>Kazi Mohammad Fahmi</td>
+                    <td>00:00</td>
+                    <td>00:00</td>
+                  </tr>
+                  <tr onclick="window.location='index.html'">
+                    <td><img src="images/Ellipse 1.png" alt="lead profile image" class="profileImage"></td>
+                    <td>Eashrat Jahan Anne</td>
+                    <td>00:00</td>
+                    <td>00:00</td>
+                  </tr>
+                  
+                </tbody>
+              </table>
+        </div>
+
+
+        <div id="Active Status" class="tabcontent">
+            <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col">Team Member</th>
+                    <th scope="col">Start Shift</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr onclick="window.location='index.html'">
+                    <td><img src="images/Ellipse 1.png" alt="lead profile image" class="profileImage"></td>
+                    <td>Shahil Yasar Haque</td>
+                    <td>Active</td>
+                  </tr>
+                  <tr onclick="window.location='index.html'">
+                    <td><img src="images/Ellipse 1.png" alt="lead profile image" class="profileImage"></td>
+                    <td>Kazi Mohammad Fahmi</td>
+                    <td>On Leave</td>
+                  </tr>
+                  <tr onclick="window.location='index.html'">
+                    <td><img src="images/Ellipse 1.png" alt="lead profile image" class="profileImage"></td>
+                    <td>Eashrat Jahan Anne</td>
+                    <td>Inactive</td>
+                  </tr>
+                  
+                </tbody>
+              </table>
+        </div>
+
+
+
+
+           
+      </div>
+
+
+      <div id="Expense" class="tabcontent">
+        <div class="tab">
+            <button class="tablinks" onclick="openTab(event, 'Budget')">Budget</button>
+            <button class="tablinks" onclick="openTab(event, 'Expenditure')">Expenditure</button>
+        </div>
+
+
+        <div id="Budget" class="tabcontent">
+            <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col">Team Member</th>
+                    <th scope="col">Start Shift</th>
+                    <th scope="col">End Shift</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr onclick="window.location='index.html'">
+                    <td><img src="images/Ellipse 1.png" alt="lead profile image" class="profileImage"></td>
+                    <td>Shahil Yasar Haque</td>
+                    <td>00:00</td>
+                    <td>00:00</td>
+                  </tr>
+                  <tr onclick="window.location='index.html'">
+                    <td><img src="images/Ellipse 1.png" alt="lead profile image" class="profileImage"></td>
+                    <td>Kazi Mohammad Fahmi</td>
+                    <td>00:00</td>
+                    <td>00:00</td>
+                  </tr>
+                  <tr onclick="window.location='index.html'">
+                    <td><img src="images/Ellipse 1.png" alt="lead profile image" class="profileImage"></td>
+                    <td>Eashrat Jahan Anne</td>
+                    <td>00:00</td>
+                    <td>00:00</td>
+                  </tr>
+                  
+                </tbody>
+              </table>
+        </div>
+
+
+        <div id="Expenditure" class="tabcontent">
+            <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col">Team Member</th>
+                    <th scope="col">Start Shift</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr onclick="window.location='index.html'">
+                    <td><img src="images/Ellipse 1.png" alt="lead profile image" class="profileImage"></td>
+                    <td>Shahil Yasar Haque</td>
+                    <td>Active</td>
+                  </tr>
+                  <tr onclick="window.location='index.html'">
+                    <td><img src="images/Ellipse 1.png" alt="lead profile image" class="profileImage"></td>
+                    <td>Kazi Mohammad Fahmi</td>
+                    <td>On Leave</td>
+                  </tr>
+                  <tr onclick="window.location='index.html'">
+                    <td><img src="images/Ellipse 1.png" alt="lead profile image" class="profileImage"></td>
+                    <td>Eashrat Jahan Anne</td>
+                    <td>Inactive</td>
+                  </tr>
+                  
+                </tbody>
+              </table>
+        </div>
+       
+      </div>
+
+
+      <div id="Documents" class="tabcontent">
         <table class="table table-hover">
             <thead>
               <tr>
-                <th scope="col">Project</th>
-                <th  scope="col">Lead</th>
+                <th scope="col">Wedding Ceremony</th>
               </tr>
             </thead>
             <tbody>
               <tr onclick="window.location='index.html'">
-                <td>Wedding Ceremony</td>
-                <td><img src="images/Ellipse 1.png" alt="lead profile image" class="profileImage"></td>
+                <td>Caterer Receipt</td>
               </tr>
               <tr onclick="window.location='index.html'">
-                <td>Funeral </td>
-                <td><img src="images/Ellipse 1.png" alt="lead profile image" class="profileImage"></td>
+                <td>Lights Receipt</td>
               </tr>
-              
             </tbody>
           </table>
+
+          <!-- <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col">Coder's Combat</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr onclick="window.location='index.html'">
+                <td>Lab Booking Receipt</td>
+              </tr>
+              <tr onclick="window.location='index.html'">
+                <td>Seat plan</td>
+              </tr>
+            </tbody>
+          </table> -->
        
       </div>
+
 
 
   </div>

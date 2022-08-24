@@ -1,0 +1,81 @@
+<html>
+  <head>
+    <title>DivItup</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="myFunction.js"></script>
+    <script src="http://www.w3schools.com/lib/w3data.js"></script>
+  </head>
+  <body onload="onclick= openTab(event, 'Notice Board')">
+    <div w3-include-html="navbar.html"></div>
+
+    <script>
+      w3IncludeHTML();
+    </script>
+
+    <!--Main Body-->
+    <div id="main">
+      <h1>Dashboard</h1>
+
+      <div class="tab">
+        <button class="tablinks" onclick="openTab(event, 'Notice Board')">
+          Notice Board
+        </button>
+        <button class="tablinks" onclick="openTab(event, 'Team Chat')">
+          Team Chat
+        </button>
+        <button class="tablinks" onclick="openTab(event, 'Attendance Stat')">
+            Attendance Stat
+        </button>
+        <button class="tablinks" onclick="openTab(event, 'Activity Log')">
+            Activity Log
+        </button>
+          
+        
+      </div>
+
+      <div id="Contacts" class="tabcontent">
+        <table class="table table-hover">
+          <tbody>
+            <tr onclick="window.location='index.html'"> 
+              <td><img src="images/Ellipse 1.png" alt="lead profile image" class="profileImage"> Shahil Yasar Haque</td>
+             
+            </tr>
+            <tr onclick="window.location='index.html'"> 
+              <td><img src="images/Ellipse 1.png" alt="lead profile image" class="profileImage"> Kazi Md. Fahmi</td>
+             
+            </tr>
+            
+          </tbody>
+        </table>
+     
+     </div>
+     
+      <div id="TM" class="tabcontent">
+        <table class="table table-hover">
+          <tbody>
+            <tr onclick="window.location='index.html'"> 
+              <td><img src="images/Ellipse 1.png" alt="lead profile image" class="profileImage"> Eashrat Jahan Anne</td>
+             
+            </tr>
+            <tr onclick="window.location='index.html'"> 
+              <td><img src="images/Ellipse 1.png" alt="lead profile image" class="profileImage"> S.M Jishanul Islam</td>
+             
+            </tr>
+            
+          </tbody>
+        </table>
+      
+
+    </div>
+  </body>
+</html>
