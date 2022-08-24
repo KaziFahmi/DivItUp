@@ -15,7 +15,7 @@
     <script src="myFunction.js"></script>
     <script src="http://www.w3schools.com/lib/w3data.js"></script>
   </head>
-  <body>
+  <body onload="onclick= openTab(event, 'Contacts')">
     <div w3-include-html="navbar.html"></div>
 
     <script>
@@ -24,63 +24,26 @@
 
     <!--Main Body-->
     <div id="main">
-      <h1>My Works</h1>
+      <h1>People</h1>
 
       <div class="tab">
-        <button class="tablinks" onclick="openTab(event, 'To Do')">
-          To Do
+        <button class="tablinks" onclick="openTab(event, 'Contacts')">
+          Contacts
         </button>
-        <button class="tablinks" onclick="openTab(event, 'Ongoing')">
-          Ongoing
+        <button class="tablinks" onclick="openTab(event, 'Team Members')">
+          Team Members
         </button>
-        <button class="tablinks" onclick="openTab(event, 'Completed')">
-          Completed
-        </button>
-        <button class="tablinks" onclick="openTab(event, 'Overdue')">
-          Overdue
-        </button>
+        
       </div>
 
-      <div id="To Do" class="tabcontent">
-        <table id="content">
-          <tr>
-            <th>Tasks</th>
-            <th>Dealine</th>
-            <th>Assignee</th>
-          </tr>
-        </table>
-        <label class="date">Today</label>
+      <div id="Contacts" class="tabcontent">
+        <div><button class="peopleDataButton" onclick="location.href = 'index.html'"><img src="images/Ellipse 1.png" alt="lead poeople image" class="peopleImage"><label >Shahil Yasar Haque </label> </button> </div>
       </div>
 
-      <div id="Ongoing" class="tabcontent">
-        <table id="content">
-          <tr>
-            <th>Tasks</th>
-            <th>Dealine</th>
-            <th>Assignee</th>
-          </tr>
-        </table>
+      <div id="Team Members" class="tabcontent">
+        <div><button class="peopleDataButton" onclick="location.href = 'index.html'"><img src="images/Ellipse 1.png" alt="lead poeople image" class="peopleImage"><label >Kazi Mohammad Fahmi</label> </button> </div>
       </div>
 
-      <div id="Completed" class="tabcontent">
-        <table id="content">
-          <tr>
-            <th>Tasks</th>
-            <th>Dealine</th>
-            <th>Assignee</th>
-          </tr>
-        </table>
-      </div>
-
-      <div id="Overdue" class="tabcontent">
-        <table id="content">
-          <tr>
-            <th>Tasks</th>
-            <th>Dealine</th>
-            <th>Assignee</th>
-          </tr>
-        </table>
-      </div>
     </div>
   </body>
 </html>

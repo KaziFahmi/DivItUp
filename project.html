@@ -11,7 +11,7 @@
         <script src="myFunction.js"></script>
         <script src="http://www.w3schools.com/lib/w3data.js"></script>
     </head>
-    <body>
+    <body onload="openTab(event, 'Recent')">
         <div w3-include-html="navbar.html"></div> 
 
         <script>
@@ -30,18 +30,13 @@
       
       <div id="Recent" class="tabcontent">
           <div><button class="projectTable" ><label class="prL" >Project </label><label class="prR">Lead </label> </button> </div>
-          <div><button class="projectDataButton" onclick="location.href = 'index.html'"><label >Wedding Ceremony </label> <img src="images/Ellipse 1.png" alt="lead profile image" class="profileImage"></button> </div>
-        
-          
+          <div><button class="peopleDataButton" onclick="location.href = 'index.html'"><label >Wedding Ceremony </label> <img src="images/Ellipse 1.png" alt="lead profile image" class="profileImage"></button> </div>
+
       </div>
       
       <div id="Completed" class="tabcontent">
-        <table id="content">
-            <tr>
-                <th>Projects</th>
-                <th>Lead</th>
-            </tr> 
-          </table>
+        <div><button class="projectTable" ><label class="prL" >Project </label><label class="prR">Lead </label> </button> </div>
+          <div><button class="peopleDataButton" onclick="location.href = 'index.html'"><label >Divorce Party </label> <img src="images/Ellipse 1.png" alt="lead profile image" class="profileImage"></button> </div>
          
        
       </div>
@@ -49,7 +44,5 @@
 
   </div>
       
-
-
     </body>
 </html>
