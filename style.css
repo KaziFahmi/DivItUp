@@ -397,3 +397,20 @@ body {
   cursor: pointer;
 }
 
+.add{
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+ 
+  transition: 0.3s;
+  font-size: 13px;
+  color: #676767;
+  margin-top: 7px;
+
+}
+
+.add:hover {
+  color:#076A96
+}
