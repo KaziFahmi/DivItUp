@@ -19,7 +19,7 @@
 
 
     </head>
-    <body onload="onclick= openTab(event, 'To Do')">
+    <body onload="document.getElementById('defaultOpen').click();">
       <div w3-include-html="navbar.html"></div> 
 
       <script>
@@ -33,7 +33,7 @@
             <h1>My Works</h1>
 
             <div class="tab">
-                <button class="tablinks" onclick="openTab(event, 'To Do')">To Do</button>
+                <button class="tablinks" onclick="openTab(event, 'To Do')" id="defaultOpen">To Do</button>
                 <button class="tablinks" onclick="openTab(event, 'Ongoing')">Ongoing</button>
                 <button class="tablinks" onclick="openTab(event, 'Completed')">Completed</button>
                 <button class="tablinks" onclick="openTab(event, 'Overdue')">Overdue</button>

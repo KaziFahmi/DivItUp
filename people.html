@@ -15,7 +15,9 @@
     <script src="myFunction.js"></script>
     <script src="http://www.w3schools.com/lib/w3data.js"></script>
   </head>
-  <body onload="onclick= openTab(event, 'Contacts')">
+
+
+  <body onload="document.getElementById('defaultOpen').click();">
     <div w3-include-html="navbar.html"></div>
 
     <script>
@@ -27,7 +29,7 @@
       <h1>People</h1>
 
       <div class="tab">
-        <button class="tablinks" onclick="openTab(event, 'Contacts')">
+        <button class="tablinks" onclick="openTab(event, 'Contacts')" id="defaultOpen">
           Contacts
         </button>
         <button class="tablinks" onclick="openTab(event, 'TM')">

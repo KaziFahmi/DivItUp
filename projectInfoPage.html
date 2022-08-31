@@ -70,7 +70,18 @@
             </tbody>
           </table>
           <hr>
-          <button class="add" onclick="window.location='index.html'">Add Task +</button>
+          <button type="button" class="add" data-toggle="modal" data-target="#exampleModal" onclick="document.getElementById('defaultOpen2').click()">
+            Add Task +
+          </button>
+          
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div w3-include-html="createTask.html"></div> 
+  
+          <script>
+            w3IncludeHTML();
+          </script>
+          </div>
       </div>
 
 
