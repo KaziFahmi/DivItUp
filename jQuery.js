@@ -1,1 +1,0 @@
-$("#DivContent").load("index.html");
