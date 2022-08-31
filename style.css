@@ -415,13 +415,13 @@ body {
   color:#076A96
 }
 
-
+/*Login*/
 .LogInLogo{
   font-family: 'Baloo Bhai 2', cursive;
     font-size: 48px;
-    margin-left: 3%;
-    margin-top: 15%;
+    margin-left: 12px;
     color: #076A96 ;
+    /* float: left; */
 }
 
 .topSignup{
@@ -449,4 +449,21 @@ body {
 
 .logoset{
   float: right;
+}
+
+.logInForm{
+  padding-top: 20px;
+  background-color: white;
+  margin-top: 10%;
+  border-radius: 9px;
+  width:50%;
+  margin-left: 25% ;
+  align-content: center;
+  box-shadow: 0 2px 4px -2px rgb(73, 72, 72);
+}
+
+
+.formSetup{
+  width: 60%;
+ margin-left: 22%;
 }
