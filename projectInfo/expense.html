@@ -16,13 +16,13 @@
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
-      
+
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
         
         
     </head>
     <body >
       
-
         <div class="tab">
             <button class="tablinks2" onclick="openSubTab(event, 'Budget')" id="defaultOpen3">Budget</button>
             <button class="tablinks2" onclick="openSubTab(event, 'Expenditure')">Expenditure</button>
@@ -30,10 +30,9 @@
 
 
         <div id="Budget" class="tabcontent2">
-          <h4>Budget Pass Date: <input type="date" id="bpd" name="bpd"></h4>
           <div></div>
             <div style="display: inline-Block;  width: 80%; ">
-               <table class="table table-hover">
+               <table class="table ">
                 <thead>
                   <tr>
                     <th scope="col">Sl.</th>
@@ -41,29 +40,36 @@
                     <th scope="col">Units</th>
                     <th scope="col">Unit Price</th>
                     <th scope="col">Total Price</th>
+                    <th scope="col">Date</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr onclick="window.location='../index.html'">
+                  <tr >
                     <td>1</td>
                     <td>Ribbons</td>
                     <td>10</td>
                     <td>100</td>
                     <td>1000</td>
+                    <td>00/00/00</td>
+                    <td><button class="fa-solid fa-pen cngbtn" type="button" data-toggle="modal" data-target="#exampleModal2"></button>
+                      <button class="fa-solid fa-trash cngbtn" ></button>
+                    </td>
                   </tr>
-                  <tr onclick="window.location='../index.html'">
+                  <tr >
                     <td>2</td>
                     <td>Table Cloths</td>
                     <td>10</td>
                     <td>500</td>
                     <td>5000</td>
+                    <td>00/00/00</td>
                   </tr>
-                  <tr onclick="window.location='../index.html'">
+                  <tr >
                     <td>3</td>
                     <td>Flowers</td>
                     <td>1000</td>
                     <td>10</td>
                     <td>10000</td>
+                    <td>00/00/00</td>
                   </tr>
                   
                 </tbody>
@@ -80,7 +86,7 @@
               <div class="modal-dialog" role="document">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel2">Add Item Budget</h5>
+                    <h5 class="modal-title" id="exampleModalLabel2">Item Budget</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                       <span aria-hidden="true">&times;</span>
                     </button>
@@ -99,21 +105,26 @@
                   <label for="">Item Units</label><br>
                   <input type="text" id="units" name="units">
               </div>
+              <div>
+                <label for="">Date</label><br>
+                <input type="date" id="bpd" name="bpd">
+            </div>
 
                   </div>
                   <div class="modal-footer">
-                    <button type="button" class="btn btn-primary">Add Item</button>
+                    <button type="button" class="btn btn-primary">Save</button>
                   </div>
                 </div>
               </div>
             </div>
+
           </div>
         </div>
 
 
         <div id="Expenditure" class="tabcontent2">
           <div style="display: inline-Block;  width: 80%; ">
-            <table class="table table-hover">
+            <table class="table ">
              <thead>
                <tr>
                  <th scope="col">Sl.</th>
@@ -127,7 +138,7 @@
                </tr>
              </thead>
              <tbody>
-               <tr onclick="window.location='../index.html'">
+               <tr >
                  <td>1</td>
                  <td>Ribbons</td>
                  <td>10</td>
@@ -136,8 +147,10 @@
                  <td>1500</td>
                  <td>00/00/00</td>
                  <td>-500</td>
+                 <td><button class="fa-solid fa-pen cngbtn" type="button" data-toggle="modal" data-target="#exampleModal3"></button>
+                  <button class="fa-solid fa-trash cngbtn" ></button></td>
                </tr>
-               <tr onclick="window.location='../index.html'">
+               <tr >
                  <td>2</td>
                  <td>Table Cloths</td>
                  <td>10</td>
@@ -146,8 +159,10 @@
                  <td>4500</td>
                  <td>00/00/00</td>
                  <td>+500</td>
+                 <td><button class="fa-solid fa-pen cngbtn" type="button" data-toggle="modal" data-target="#exampleModal3"></button>
+                  <button class="fa-solid fa-trash cngbtn" ></button></td>
                </tr>
-               <tr onclick="window.location='../index.html'">
+               <tr >
                  <td>3</td>
                  <td>Flowers</td>
                  <td>1000</td>
@@ -174,7 +189,7 @@
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">Add Item Expense</h5>
+                  <h5 class="modal-title" id="exampleModalLabel">Item Expense</h5>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
@@ -182,7 +197,7 @@
                 <div class="modal-body">
                     <div>
                       <label for="">Item Name</label><br>
-                      <input type="text" id="Iname" name="Iname"><br><br>
+                      <input type="text" id="Iname" name="Iname" style="width: 80%;"><br><br>
                   </div>
                   <div>
                     <label for="">Item Unit Price</label><br>
@@ -202,7 +217,7 @@
             </div>
 
                   <div class="modal-footer">
-                    <button type="button" class="btn btn-primary">Add Item</button>
+                    <button type="button" class="btn btn-primary">Save</button>
                   </div>
               </div>
             </div>
