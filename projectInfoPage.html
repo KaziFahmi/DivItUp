@@ -38,59 +38,18 @@
        
       </div>
       <div id="Task_Structure" class="tabcontent">
+        <div w3-include-html="projectInfo/taskStructure.html"></div> 
 
-        <table class="table table-hover">
-            <thead>
-              <tr>
-                <th scope="col">Tasks</th>
-                <th  scope="col">Subtasks</th>
-                <th  scope="col">Deadline</th>
-                <th  scope="col">Assignee</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr onclick="window.location='index.html'">
-                <tr><td>Setup</td>
-                    <td>Caterer Contact</td><td>10/09/2022</td>
-                    <td><img src="images/Ellipse 1.png" alt="lead profile image" class="profileImage"></td>
-                </tr>
-                <tr><td></td>
-                    <td>Venue Contact</td>
-                    <td>08/09/2022</td><td><img src="images/Ellipse 1.png" alt="lead profile image" class="profileImage"></td></tr>
-              </tr>
-              <tr onclick="window.location='index.html'">
-                <tr><td>Decoration</td>
-                    <td>Design</td><td>10/09/2022</td>
-                    <td><img src="images/Ellipse 1.png" alt="lead profile image" class="profileImage"></td>
-                </tr>
-                <tr><td></td>
-                    <td>Lights</td>
-                    <td>08/09/2022</td><td><img src="images/Ellipse 1.png" alt="lead profile image" class="profileImage"></td></tr>
-              </tr>
-            </tbody>
-          </table>
-          <hr>
-          <button type="button" class="add" data-toggle="modal" data-target="#exampleModal" onclick="document.getElementById('defaultOpen2').click()">
-            Add Task +
-          </button>
-          
-          <!-- Modal -->
-          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div w3-include-html="createTask.html"></div> 
-  
-          <script>
-            w3IncludeHTML();
-          </script>
-          </div>
+        <script>
+          w3IncludeHTML();
+        </script>
+
       </div>
 
 
       <div id="Board" class="tabcontent"> <script>// korinai</script>
 
-
-
-
-        <div w3-include-html="board.html"></div> 
+        <div w3-include-html="projectInfo/board.html"></div> 
 
         <script>
           w3IncludeHTML();
@@ -100,228 +59,24 @@
 
 
       <div id="Team" class="tabcontent" >
-        <div class="tab">
-            <button class="tablinks2" onclick="openSubTab(event, 'Team Overview')" id="defaultOpen2">Team Overview</button>
-            <button class="tablinks2" onclick="openSubTab(event, 'Shifts')">Shifts</button>
-            <button class="tablinks2" onclick="openSubTab(event, 'Active Status')">Active Status</button>
-        </div>
+        
+        <div w3-include-html="projectInfo/team.html"></div> 
 
-
-        <div id="Team Overview" class="tabcontent2" >
-            <table class="table table-hover">
-                <thead>
-                  <tr>
-                    <th scope="col">Team Member</th>
-                    <th scope="col">Department</th>
-                    <th scope="col">Attendance</th>
-                    <th scope="col">Total Tasks Assigned</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr onclick="window.location='index.html'">
-                    <td><img src="images/Ellipse 1.png" alt="lead profile image" class="profileImage">Shahil Yasar Haque</td>
-                    <td>Dev</td>
-                    <td>10/12</td>
-                    <td>3</td>
-                  </tr>
-                  <tr onclick="window.location='index.html'">
-                    <td><img src="images/Ellipse 1.png" alt="lead profile image" class="profileImage">Kazi Mohammad Fahmi</td>
-                    <td>HR</td>
-                    <td>12/12</td>
-                    <td>2</td>
-                  </tr>
-                  <tr onclick="window.location='index.html'">
-                    <td><img src="images/Ellipse 1.png" alt="lead profile image" class="profileImage">Eashrat Jahan Anne</td>
-                    <td>PR</td>
-                    <td>11/12</td>
-                    <td>3</td>
-                  </tr>
-                  
-                </tbody>
-              </table>
-        </div>
-
-
-        <div id="Shifts" class="tabcontent2">
-            <table class="table table-hover">
-                <thead>
-                  <tr>
-                    <th scope="col">Team Member</th>
-                    <th scope="col">Start Shift</th>
-                    <th scope="col">End Shift</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr onclick="window.location='index.html'">
-                    <td><img src="images/Ellipse 1.png" alt="lead profile image" class="profileImage">Shahil Yasar Haque</td>
-                    <td>00:00</td>
-                    <td>00:00</td>
-                  </tr>
-                  <tr onclick="window.location='index.html'">
-                    <td><img src="images/Ellipse 1.png" alt="lead profile image" class="profileImage">Kazi Mohammad Fahmi</td>
-                    <td>00:00</td>
-                    <td>00:00</td>
-                  </tr>
-                  <tr onclick="window.location='index.html'">
-                    <td><img src="images/Ellipse 1.png" alt="lead profile image" class="profileImage">Eashrat Jahan Anne</td>
-                    <td>00:00</td>
-                    <td>00:00</td>
-                  </tr>
-                  
-                </tbody>
-              </table>
-        </div>
-
-
-        <div id="Active Status" class="tabcontent2">
-            <table class="table table-hover">
-                <thead>
-                  <tr>
-                    <th scope="col">Team Member</th>
-                    <th scope="col">Status</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr onclick="window.location='index.html'">
-                    <td><img src="images/Ellipse 1.png" alt="lead profile image" class="profileImage">Shahil Yasar Haque</td>
-                    <td>Active</td>
-                  </tr>
-                  <tr onclick="window.location='index.html'">
-                    <td><img src="images/Ellipse 1.png" alt="lead profile image" class="profileImage">Kazi Mohammad Fahmi</td>
-                    <td>On Leave</td>
-                  </tr>
-                  <tr onclick="window.location='index.html'">
-                    <td><img src="images/Ellipse 1.png" alt="lead profile image" class="profileImage">Eashrat Jahan Anne</td>
-                    <td>Inactive</td>
-                  </tr>
-                  
-                </tbody>
-              </table>
-        </div>
-
-
-
-
+        <script>
+          w3IncludeHTML();
+        </script>
            
       </div>
 
 
       <div id="Expense" class="tabcontent">
-        <div class="tab">
-            <button class="tablinks2" onclick="openSubTab(event, 'Budget')" id="defaultOpen3">Budget</button>
-            <button class="tablinks2" onclick="openSubTab(event, 'Expenditure')">Expenditure</button>
-        </div>
 
+        <div w3-include-html="projectInfo/expense.html"></div> 
 
-        <div id="Budget" class="tabcontent2">
-          <h4>Budget Pass Date: 00/00/00</h4>
-            <div style="display: inline-Block;  width: 80%; ">
-               <table class="table table-hover">
-                <thead>
-                  <tr>
-                    <th scope="col">Sl.</th>
-                    <th scope="col">Item Name</th>
-                    <th scope="col">Units</th>
-                    <th scope="col">Unit Price</th>
-                    <th scope="col">Total Price</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr onclick="window.location='index.html'">
-                    <td>1</td>
-                    <td>Ribbons</td>
-                    <td>10</td>
-                    <td>100</td>
-                    <td>1000</td>
-                  </tr>
-                  <tr onclick="window.location='index.html'">
-                    <td>2</td>
-                    <td>Table Cloths</td>
-                    <td>10</td>
-                    <td>500</td>
-                    <td>5000</td>
-                  </tr>
-                  <tr onclick="window.location='index.html'">
-                    <td>3</td>
-                    <td>Flowers</td>
-                    <td>1000</td>
-                    <td>10</td>
-                    <td>10000</td>
-                  </tr>
-                  
-                </tbody>
-              </table>
-              <hr>
-              <button class="add" onclick="window.location='index.html'">Add Item +</button>
-            </div>
-            <div  style="display: inline-Block;">
-              <h1 style="border: solid 1px lightgrey; color: black;"> <p>Total Budget:</p> 
-                 <p> 16000 Tk.</p></h1>
-            </div>
+        <script>
+          w3IncludeHTML();
+        </script>
            
-        </div>
-
-
-        <div id="Expenditure" class="tabcontent2">
-          <div style="display: inline-Block;  width: 70%; ">
-            <table class="table table-hover">
-             <thead>
-               <tr>
-                 <th scope="col">Sl.</th>
-                 <th scope="col">Item Name</th>
-                 <th scope="col">Units</th>
-                 <th scope="col">Unit Price</th>
-                 <th scope="col">Total Price</th>
-                 <th scope="col">Actual Price</th>
-                 <th scope="col">Date</th>
-                 <th scope="col">Net Balance</th>
-               </tr>
-             </thead>
-             <tbody>
-               <tr onclick="window.location='index.html'">
-                 <td>1</td>
-                 <td>Ribbons</td>
-                 <td>10</td>
-                 <td>100</td>
-                 <td>1000</td>
-                 <td>1500</td>
-                 <td>00/00/00</td>
-                 <td>-500</td>
-               </tr>
-               <tr onclick="window.location='index.html'">
-                 <td>2</td>
-                 <td>Table Cloths</td>
-                 <td>10</td>
-                 <td>500</td>
-                 <td>5000</td>
-                 <td>4500</td>
-                 <td>00/00/00</td>
-                 <td>+500</td>
-               </tr>
-               <tr onclick="window.location='index.html'">
-                 <td>3</td>
-                 <td>Flowers</td>
-                 <td>1000</td>
-                 <td>10</td>
-                 <td>10000</td>
-                 <td>15000</td>
-                 <td>00/00/00</td>
-                 <td>-5000</td>
-               </tr>
-               
-             </tbody>
-           </table>
-           <hr>
-              <button class="add" onclick="window.location='index.html'">Add Item +</button>
-         </div>
-         <div  style="display: inline-Block;">
-           <h1 style="border: solid 1px lightgrey; color: black;"> <p>Total Budget:</p> 
-              <p> 16000 Tk.</p><p style="font-size: 15px; color:#676767">Total Net Balance: -5000tk. </p></h1>
-
-         </div>
-        
-     </div>
-        </div>
        
       </div>
 
