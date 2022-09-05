@@ -685,8 +685,6 @@ textarea {
 }
 
 
-
-
 .cngbtn{
   border: none;
   color: #676767;
@@ -710,4 +708,56 @@ textarea {
 .addpeepsbtn:hover{
     color: #444;
 }
+
+
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+  float: right;
+  width: 25%;
+  margin: 1%;
+  padding: 30px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.dashboardStuff{
+  padding: 30px;
+}
+
+
+
+/* Responsive layout - makes the four columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+
+#notBoard{
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align:justify;
+}
+
+
+
+
+
+
 
