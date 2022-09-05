@@ -4,6 +4,73 @@ body {
   }
 /*navbar*/
 
+.column {
+  float: left;
+  width: 50%;
+  
+}
+
+/* Clear floats after the columns */
+.row:after {
+  float: right;
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column2 {
+  float: left;
+  width: 50%;
+  height:20%;
+  padding: 5px;
+}
+
+
+/* Clear floats after the columns */
+.row:after {
+  float: right;
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+.container {    /* prb*/
+  width:50px;
+  height:50px;
+  width: 50%;
+}
+.container:after {
+  width: 50px;
+  height: 50px;
+  content: "";
+  display: table;
+  clear: both;
+  
+}
+
+
+.container2 {    /* prb*/
+  width:20px;
+  height:20px;
+  width: 50%;
+}
+.container2.after {
+  width: 50px;
+  height: 50px;
+  content: "";
+  display: table;
+  clear: both;
+  
+}
+
+
   /*navbar shadow*/
   .topnav {
     overflow: hidden;
@@ -205,6 +272,10 @@ body {
   /*main Body*/
 
   h1{
+    color: #076A96;
+  }
+
+  h2{
     color: #076A96;
   }
 
