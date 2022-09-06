@@ -35,6 +35,15 @@
         <button class="tablinks" onclick="openTab(event, 'Team'); document.getElementById('defaultOpen2').click();" >Team</button>
         <button class="tablinks" onclick="openTab(event, 'Expense');document.getElementById('defaultOpen3').click();">Expense</button>
         <button class="tablinks" onclick="openTab(event, 'Documents')">Documents</button>
+        <button class="tablinks" onclick="openTab(event, 'Leaves')">Leave Management</button>
+
+        <button type="button" class="leaveReq" data-toggle="modal" data-target="#leaveRequest" onclick="document.getElementById('defaultOpen2').click()">
+          Leave Request
+        </button>
+        
+        <!-- Modal -->
+        <div class="modal fade" id="leaveRequest" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div w3-include-html="../leaveRequest.html"></div> </div> 
        
       </div>
       <div id="Task_Structure" class="tabcontent">
@@ -83,6 +92,10 @@
 
       <div id="Documents" class="tabcontent">
         <div w3-include-html="projectInfo/document.html"></div> 
+      </div>
+
+      <div id="Leaves" class="tabcontent">
+        <div w3-include-html="projectInfo/leaves.html"></div> 
       </div>
 
 

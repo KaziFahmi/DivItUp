@@ -28,39 +28,8 @@
         </script>
 
 <div id="main">
-    <h1>Projects</h1>
+    <h1>Settings</h1>
 
-    <div class="tab">
-        <button class="tablinks" onclick="openTab(event, 'Recent')" id="defaultOpen">Recent Projects</button>
-        <button class="tablinks" onclick="openTab(event, 'Completed')">Completed Projects</button>
-        <button type="button" class="createProject" data-toggle="modal" data-target="#exampleModal" onclick="document.getElementById('defaultOpen2').click()">
-          Create Project +
-        </button>
-        
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div w3-include-html="createProject.html"></div> 
-
-        <script>
-          w3IncludeHTML();
-        </script>
-        </div>
-     
-       
-      </div>
-      
-      <div id="Recent" class="tabcontent">
-        <div w3-include-html="projects/recProj.html"></div> 
-      </div>
-      
-      <div id="Completed" class="tabcontent">
-
-        <div w3-include-html="projects/recProj.html"></div> 
-        
-      </div>
-
-
-  </div>
       
     </body>
 </html>
