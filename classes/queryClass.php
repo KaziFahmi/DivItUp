@@ -11,12 +11,12 @@
         public static function insertBudget($eventId, $budget, $connect){
             $insertQuery = $connect->prepare("INSERT INTO user (item_name, units, estimated_unit_price, actual_unit_price, date_expended, date_issued, event_id)
             VALUES (?, ?, ?, ?, ?, ?,?)");
-            $itemname=$budget->getItemName()
-            $units=$budget->getUnits()
-            $estimatedunitprice=$budget->getEstimatedUnitPrice()
-            $actualunitprice= $budget->getActualUnitPrice()
-            $dateexpended=$budget->getDateExpended
-            $dateissued=$budget->getDateIssued()
+            $itemname=$budget->getItemName();
+            $units=$budget->getUnits();
+            $estimatedunitprice=$budget->getEstimatedUnitPrice();
+            $actualunitprice= $budget->getActualUnitPrice();
+            $dateexpended=$budget->getDateExpended();
+            $dateissued=$budget->getDateIssued();
 
 
 
@@ -27,9 +27,9 @@
         public static function insertComment($comment, $connect){
             $insertQuery = $connect->prepare("INSERT INTO comments (content, task_id, user_id)
             VALUES (?, ?, ?)");
-            $content=$comment->getContent()
-            $taskid= $comment->getTaskId()
-            $userid= $comment->getUserID()
+            $content=$comment->getContent();
+            $taskid= $comment->getTaskId();
+            $userid= $comment->getUserID();
 
         
             $insertQuery->bind_param("sii",$content,$taskid,$userid );
@@ -39,9 +39,9 @@
         public static function insertDocument($document, $eventId, $connect){
             $insertQuery = $connect->prepare("INSERT INTO document (file_name, file_type, file, event_id)
             VALUES (?, ?, ?)");
-            $name=$document->getName()
-            $filetype=$document->getFileType()
-            $document=$document->getDocument()
+            $name=$document->getName();
+            $filetype=$document->getFileType();
+            $document=$document->getDocument();
      
 
             $insertQuery->bind_param("sss", $name, $filetype,  $document, $eventId);
@@ -51,10 +51,10 @@
         public static function insertEvent($event, $connect){
             $insertQuery = $connect->prepare("INSERT INTO event (event_id, name, summary, creatorId)
             VALUES (?, ?, ?, ?)");
-            $id=$event->getId()
-            $name=$event->getName()
-            $summary=$event->getSummary()
-            $creatorid=$event->getCreatorId()
+            $id=$event->getId();
+            $name=$event->getName();
+            $summary=$event->getSummary();
+            $creatorid=$event->getCreatorId();
 
              
             $insertQuery->bind_param("issi",$id, $name, $summary, $creatorid);
@@ -93,13 +93,13 @@
             $insertQuery = $connect->prepare("INSERT INTO task (task_id, summary, starting_time, deadline, status, event_id, user_id)
             VALUES (?, ?, ?, ?, ?, ?, ?)");
 
-            $id= $task->getId()
-            $summary= $task->getSummary()
-            $startingTime= $task->getStartingTime
-            $deadeline= $task->getDeadline()
-            $status=$task->getStatus()
-            $eventid=$task->getEventId()
-            $assigneeid=$task->getAssigneeId()
+            $id= $task->getId();
+            $summary= $task->getSummary();
+            $startingTime= $task->getStartingTime();
+            $deadeline= $task->getDeadline();
+            $status=$task->getStatus();
+            $eventid=$task->getEventId();
+            $assigneeid=$task->getAssigneeId();
 
             $insertQuery->bind_param("issssii", $id , $summary , $startingTime , $deadeline, $status, $eventid,  $assigneeid);
             $insertQuery->execute();
@@ -130,9 +130,6 @@
             $insertQuery->bind_param("sii",$deparment, $userId, $eventId, $connect);
             $insertQuery->execute();
         }
-
-
-
 
     }
 
