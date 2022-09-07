@@ -22,6 +22,15 @@
 
   </head>
   <body onload="onclick= openTab(event, 'Notice Board')">
+
+    <?php
+      // checking session
+      session_start();
+      if($_SESSION['id'] == NULL){
+        header(location:index.php);
+      }
+    ?>
+
     <div w3-include-html="navbar.php"></div>
 
     <script>
