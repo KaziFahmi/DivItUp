@@ -65,6 +65,8 @@ var t = 0;
   }
   document.getElementById("defaultOpen").click();
   document.getElementById("defaultOpen2").click();
+  document.getElementById("defaultOpen3").click();
+
 
   
 

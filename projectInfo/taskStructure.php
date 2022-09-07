@@ -60,7 +60,7 @@
           
           <!-- Modal -->
           <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div w3-include-html="../createTask.php"></div> </div> 
+            <?php include "projectInfo/createTask.php" ?></div>
       
     </body>
 </html>

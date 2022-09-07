@@ -16,16 +16,13 @@
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
       
         
     </head>
     <body onload="document.getElementById('defaultOpen').click();" >
-        <div w3-include-html="navbar.php"></div> 
-
-        <script>
-          w3IncludeHTML();
-        </script>
-
+       <?php include "navbar.php"
+       ?>
 <div id="main">
     <h1>Wedding Ceremony</h1>
 
@@ -37,65 +34,48 @@
         <button class="tablinks" onclick="openTab(event, 'Documents')">Documents</button>
         <button class="tablinks" onclick="openTab(event, 'Leaves')">Leave Management</button>
 
-        <button type="button" class="leaveReq" data-toggle="modal" data-target="#leaveRequest" onclick="document.getElementById('defaultOpen2').click()">
+        <button type="button" class="leaveReq" data-toggle="modal" data-target="#leaveRequest" >
           Leave Request
         </button>
         
         <!-- Modal -->
         <div class="modal fade" id="leaveRequest" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div w3-include-html="../leaveRequest.php"></div> </div> 
+         <?php include "leaveRequest.php"?> </div> 
        
       </div>
       <div id="Task_Structure" class="tabcontent">
-        <div w3-include-html="projectInfo/taskStructure.php"></div> 
-
-        <script>
-          w3IncludeHTML();
-        </script>
-
+          <?php include "projectInfo/taskStructure.php" ?>
       </div>
 
 
       <div id="Board" class="tabcontent"> <script>// korinai</script>
 
-        <div w3-include-html="projectInfo/board.php"></div> 
-
-        <script>
-          w3IncludeHTML();
-        </script>
+        <?php include "projectInfo/board.php" ?>
 
       </div>
 
 
       <div id="Team" class="tabcontent" >
         
-        <div w3-include-html="projectInfo/team.php"></div> 
-
-        <script>
-          w3IncludeHTML();
-        </script>
+      <?php include "projectInfo/team.php" ?>
            
       </div>
 
 
       <div id="Expense" class="tabcontent">
 
-        <div w3-include-html="projectInfo/expense.php"></div> 
-
-        <script>
-          w3IncludeHTML();
-        </script>
+      <?php include "projectInfo/expense.php" ?>
            
        
       </div>
 
 
       <div id="Documents" class="tabcontent">
-        <div w3-include-html="projectInfo/document.php"></div> 
+        <?php include "projectInfo/document.php" ?>
       </div>
 
       <div id="Leaves" class="tabcontent">
-        <div w3-include-html="projectInfo/leaves.php"></div> 
+       <?php include "projectInfo/leaves.php" ?>
       </div>
 
 
