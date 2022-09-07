@@ -28,13 +28,13 @@
         </script>
 
 <div id="main">
-    <h1>Projects</h1>
+    <h1>Events</h1>
 
     <div class="tab">
-        <button class="tablinks" onclick="openTab(event, 'Recent')" id="defaultOpen">Recent Projects</button>
-        <button class="tablinks" onclick="openTab(event, 'Completed')">Completed Projects</button>
+        <button class="tablinks" onclick="openTab(event, 'Recent')" id="defaultOpen">Recent Events</button>
+        <button class="tablinks" onclick="openTab(event, 'Completed')">Completed Events</button>
         <button type="button" class="createProject" data-toggle="modal" data-target="#exampleModal" onclick="document.getElementById('defaultOpen2').click()">
-          Create Project +
+          Create Events +
         </button>
         
         <!-- Modal -->

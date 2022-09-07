@@ -40,7 +40,10 @@
             </tbody>
           </table>
           <hr>
-          <input type="file" id="myfile" name="myfile" >
+          <form action="">
+          <input type="file" id="myfile" name="myfile" ><br>
+          <button type="submit" class="add">Add document</button>
+        </form>
 
         
       

@@ -74,8 +74,14 @@
             </select>
           </div>
           <div class="chat">
-
+            <label style="border:1px solid #676767;border-radius: 15px;height:30px;background-color:#676767;color:white;"> Hello </label><br>
+            <label style="border:1px solid #0b7dda;border-radius: 15px;height:30px;background-color:#0b7dda;color:white;float:right">Hello</label>
           </div>
+          <div class="chatBox">
+          <form action="" style="float:right; width:100%;text-align:right;">
+              <input type="text"style="width:60%">
+              <button type="submit"class="btn btn-primary" >Send</button>
+            </form></div>
         </div>
         <div class="col-5" >
           <h2>Activity log</h2>

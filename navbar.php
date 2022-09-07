@@ -66,7 +66,7 @@
       </form>
       <a class="siOp" href="dashboard.php">Dashboard</a>
       <a class="siOp" href="myWorks.php">My Works</a>
-      <a class="siOp" href="project.php">Projects</a>
+      <a class="siOp" href="project.php">Events</a>
       <a class="siOp" href="people.php">People</a>
     </div>
     <!--Side bar-->
