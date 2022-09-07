@@ -21,8 +21,14 @@
         
     </head>
     <body onload="document.getElementById('defaultOpen').click();" >
-       <?php include "navbar.php"
-       ?>
+    <?php
+
+      include "navbar.php"
+    ?>
+
+<script>
+  w3IncludeHTML();
+</script>
 <div id="main">
     <h1>Wedding Ceremony</h1>
 
@@ -39,7 +45,7 @@
         </button>
         
         <!-- Modal -->
-        <div class="modal fade" id="leaveRequest" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="leaveRequest" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" >
          <?php include "leaveRequest.php"?> </div> 
        
       </div>

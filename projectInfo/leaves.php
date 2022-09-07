@@ -28,7 +28,7 @@
             <tbody>
               <tr >
                 <tr>
-                    <td>
+                    <td data-toggle="modal" data-target="#leaveData">
                         <img src="images/Ellipse 1.png" alt="lead profile image ">
                         <label for="">  Shahil Yasar Haque</label>
                     </td>
@@ -44,5 +44,11 @@
             </tbody>
           </table>
        <hr>
+
+        <!-- Modal -->
+        <div class="modal fade" id="leaveData" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+         <?php include "leaveData.php"?> </div> 
+       
+      </div>
     </body>
 </html>

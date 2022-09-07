@@ -73,6 +73,7 @@ body {
 
   /*navbar shadow*/
   .topnav {
+    
     overflow: hidden;
     background-color: #FFF;
     box-shadow: 0 2px 4px -2px rgb(73, 72, 72);
@@ -145,7 +146,7 @@ body {
     margin-top: 53px;
     height: 100%; /* 100% Full-height */
     width: 0; /* 0 width - change this with JavaScript */
-    position:fixed;/*  Stay in place */
+    position:absolute;/*  Stay in place */
     z-index: 1; /* Stay on top */
     top: 0;
     left: 0;
@@ -776,7 +777,18 @@ div.notBoard {
   margin:4px, 4px;
   padding:4px;
   width: 98%;
-  height: 300px;
+  height: 200px;
+  text-align:justify;
+  border:1px solid #c2c1c1;
+  border-top-style: none;
+  background-color: #c2c1c1;
+}
+
+.chatBox{
+  margin:4px, 4px;
+  padding:4px;
+  width: 98%;
+  height:53px;
   text-align:justify;
   border:1px solid #c2c1c1;
   border-top-style: none;
@@ -838,3 +850,4 @@ div.notBoard {
     border-color: #676767;
     box-shadow: 0 0 10px #676767;
 }
+

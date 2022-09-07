@@ -25,7 +25,7 @@
         <div class="modal-dialog" role="document" >
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel" style="color: #076A96;">Leave Request</h5>
+                <h5 class="modal-title" id="exampleModalLabel" style="color: #076A96;">Leave Data</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
@@ -33,18 +33,14 @@
               <div class="modal-body">
 
                 <label for="">Description</label><br>
-                 <textarea id="Description" name="Description" rows="2" cols="50" >
+                 <textarea id="Description" name="Description" rows="2" cols="50" readonly>
                 </textarea>
                     
                 
 
                 <div>
                     <label for="">Date of Leave</label><br>
-                    <input type="date" id="start" name="start">-<input type="date" id="end" name="end">
-                </div>
-                <div>
-                    <label for="">Attachments</label><br>
-                    <input type="file" id="myfile" name="myfile" >
+                    <label for="">00/00/00 - 00/00/00</label>
                 </div>
                 <div>
                     <label for="">Requester</label><br>
