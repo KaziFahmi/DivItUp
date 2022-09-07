@@ -24,20 +24,14 @@
       
 
         <table class="table table-hover">
-            <thead>
-              <tr>
-                <th scope="col">Project</th>
-                <th  scope="col">Lead</th>
-              </tr>
-            </thead>
             <tbody>
-                <tr onclick="window.location='projectInfoPage.html'">
-                <td>Wedding Ceremony</td>
-                <td><img src="images/Ellipse 1.png" alt="lead profile image" class="profileImage"></td>
+              <tr onclick="window.location='index.php'"> 
+                <td><img src="images/Ellipse 1.png" alt="lead profile image" class="profileImage"> Shahil Yasar Haque</td>
+               
               </tr>
-              <tr onclick="window.location='projectInfoPage.html'">
-                <td>Funeral </td>
-                <td><img src="images/Ellipse 1.png" alt="lead profile image" class="profileImage"></td>
+              <tr onclick="window.location='index.php'"> 
+                <td><img src="images/Ellipse 1.png" alt="lead profile image" class="profileImage"> Kazi Md. Fahmi</td>
+               
               </tr>
               
             </tbody>

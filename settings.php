@@ -6,9 +6,9 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="../style.css">
+        <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <script src="../myFunction.js"></script>
+        <script src="myFunction.js"></script>
         <script src="http://www.w3schools.com/lib/w3data.js"></script>
         
         
@@ -20,29 +20,16 @@
         
         
     </head>
-    <body >
-        <table class="table table-hover">
-            <thead>
-              <tr>
-                <th scope="col">File Name</th>
-                <th scope="col">File Type</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr onclick="window.location='index.html'">
-                <td>Caterer Receipt</td>
-                <td>pdf file</td>
-              </tr>
-              <tr onclick="window.location='index.html'">
-                <td>Lights Receipt</td>
-                <td>pdf file</td>
-              </tr>
-            </tbody>
-          </table>
-          <hr>
-          <input type="file" id="myfile" name="myfile" >
+    <body onload="document.getElementById('defaultOpen').click();">
+        <div w3-include-html="navbar.php"></div> 
 
-        
+        <script>
+          w3IncludeHTML();
+        </script>
+
+<div id="main">
+    <h1>Settings</h1>
+
       
     </body>
 </html>

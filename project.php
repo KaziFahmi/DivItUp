@@ -21,7 +21,7 @@
         
     </head>
     <body onload="document.getElementById('defaultOpen').click();">
-        <div w3-include-html="navbar.html"></div> 
+        <div w3-include-html="navbar.php"></div> 
 
         <script>
           w3IncludeHTML();
@@ -39,7 +39,7 @@
         
         <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div w3-include-html="createProject.html"></div> 
+          <div w3-include-html="createProject.php"></div> 
 
         <script>
           w3IncludeHTML();
@@ -50,12 +50,12 @@
       </div>
       
       <div id="Recent" class="tabcontent">
-        <div w3-include-html="projects/recProj.html"></div> 
+        <div w3-include-html="projects/recProj.php"></div> 
       </div>
       
       <div id="Completed" class="tabcontent">
 
-        <div w3-include-html="projects/recProj.html"></div> 
+        <div w3-include-html="projects/recProj.php"></div> 
         
       </div>
 

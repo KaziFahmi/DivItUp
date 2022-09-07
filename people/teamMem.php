@@ -25,12 +25,12 @@
 
         <table class="table table-hover">
             <tbody>
-              <tr onclick="window.location='index.html'"> 
-                <td><img src="images/Ellipse 1.png" alt="lead profile image" class="profileImage"> Shahil Yasar Haque</td>
+              <tr onclick="window.location='index.php'"> 
+                <td><img src="images/Ellipse 1.png" alt="lead profile image" class="profileImage"> Eashrat Jahan Anne</td>
                
               </tr>
-              <tr onclick="window.location='index.html'"> 
-                <td><img src="images/Ellipse 1.png" alt="lead profile image" class="profileImage"> Kazi Md. Fahmi</td>
+              <tr onclick="window.location='index.php'"> 
+                <td><img src="images/Ellipse 1.png" alt="lead profile image" class="profileImage"> S.M Jishanul Islam</td>
                
               </tr>
               

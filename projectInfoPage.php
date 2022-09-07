@@ -20,7 +20,7 @@
         
     </head>
     <body onload="document.getElementById('defaultOpen').click();" >
-        <div w3-include-html="navbar.html"></div> 
+        <div w3-include-html="navbar.php"></div> 
 
         <script>
           w3IncludeHTML();
@@ -43,11 +43,11 @@
         
         <!-- Modal -->
         <div class="modal fade" id="leaveRequest" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div w3-include-html="../leaveRequest.html"></div> </div> 
+          <div w3-include-html="../leaveRequest.php"></div> </div> 
        
       </div>
       <div id="Task_Structure" class="tabcontent">
-        <div w3-include-html="projectInfo/taskStructure.html"></div> 
+        <div w3-include-html="projectInfo/taskStructure.php"></div> 
 
         <script>
           w3IncludeHTML();
@@ -58,7 +58,7 @@
 
       <div id="Board" class="tabcontent"> <script>// korinai</script>
 
-        <div w3-include-html="projectInfo/board.html"></div> 
+        <div w3-include-html="projectInfo/board.php"></div> 
 
         <script>
           w3IncludeHTML();
@@ -69,7 +69,7 @@
 
       <div id="Team" class="tabcontent" >
         
-        <div w3-include-html="projectInfo/team.html"></div> 
+        <div w3-include-html="projectInfo/team.php"></div> 
 
         <script>
           w3IncludeHTML();
@@ -80,7 +80,7 @@
 
       <div id="Expense" class="tabcontent">
 
-        <div w3-include-html="projectInfo/expense.html"></div> 
+        <div w3-include-html="projectInfo/expense.php"></div> 
 
         <script>
           w3IncludeHTML();
@@ -91,11 +91,11 @@
 
 
       <div id="Documents" class="tabcontent">
-        <div w3-include-html="projectInfo/document.html"></div> 
+        <div w3-include-html="projectInfo/document.php"></div> 
       </div>
 
       <div id="Leaves" class="tabcontent">
-        <div w3-include-html="projectInfo/leaves.html"></div> 
+        <div w3-include-html="projectInfo/leaves.php"></div> 
       </div>
 
 

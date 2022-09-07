@@ -26,7 +26,7 @@
 
 
   <body onload="document.getElementById('defaultOpen').click();">
-    <div w3-include-html="navbar.html"></div>
+    <div w3-include-html="navbar.php"></div>
 
     <script>
       w3IncludeHTML();
@@ -47,13 +47,13 @@
       </div>
 
       <div id="Contacts" class="tabcontent">
-        <div w3-include-html="people/contacts.html"></div> 
+        <div w3-include-html="people/contacts.php"></div> 
      
      </div>
      
       <div id="TM" class="tabcontent">
         
-        <div w3-include-html="people/teamMem.html"></div> 
+        <div w3-include-html="people/teamMem.php"></div> 
 
     </div>
   </body>

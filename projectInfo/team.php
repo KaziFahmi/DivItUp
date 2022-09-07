@@ -41,19 +41,19 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr onclick="window.location='../index.html'">
+                  <tr onclick="window.location='../index.php'">
                     <td><img src="../images/Ellipse 1.png" alt="lead profile image" class="profileImage">Shahil Yasar Haque</td>
                     <td>Dev</td>
                     <td>10/12</td>
                     <td>3</td>
                   </tr>
-                  <tr onclick="window.location='../index.html'">
+                  <tr onclick="window.location='../index.php'">
                     <td><img src="../images/Ellipse 1.png" alt="lead profile image" class="profileImage">Kazi Mohammad Fahmi</td>
                     <td>HR</td>
                     <td>12/12</td>
                     <td>2</td>
                   </tr>
-                  <tr onclick="window.location='../index.html'">
+                  <tr onclick="window.location='../index.php'">
                     <td><img src="../images/Ellipse 1.png" alt="lead profile image" class="profileImage">Eashrat Jahan Anne</td>
                     <td>PR</td>
                     <td>11/12</td>
@@ -75,17 +75,17 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr onclick="window.location='../index.html'">
+                  <tr onclick="window.location='../index.php'">
                     <td><img src="../images/Ellipse 1.png" alt="lead profile image" class="profileImage">Shahil Yasar Haque</td>
                     <td>00:00</td>
                     <td>00:00</td>
                   </tr>
-                  <tr onclick="window.location='../index.html'">
+                  <tr onclick="window.location='../index.php'">
                     <td><img src="../images/Ellipse 1.png" alt="lead profile image" class="profileImage">Kazi Mohammad Fahmi</td>
                     <td>00:00</td>
                     <td>00:00</td>
                   </tr>
-                  <tr onclick="window.location='../index.html'">
+                  <tr onclick="window.location='../index.php'">
                     <td><img src="../images/Ellipse 1.png" alt="lead profile image" class="profileImage">Eashrat Jahan Anne</td>
                     <td>00:00</td>
                     <td>00:00</td>
@@ -105,15 +105,15 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr onclick="window.location='../index.html'">
+                  <tr onclick="window.location='../index.php'">
                     <td><img src="../images/Ellipse 1.png" alt="lead profile image" class="profileImage">Shahil Yasar Haque</td>
                     <td>Active</td>
                   </tr>
-                  <tr onclick="window.location='../index.html'">
+                  <tr onclick="window.location='../index.php'">
                     <td><img src="../images/Ellipse 1.png" alt="lead profile image" class="profileImage">Kazi Mohammad Fahmi</td>
                     <td>On Leave</td>
                   </tr>
-                  <tr onclick="window.location='../index.html'">
+                  <tr onclick="window.location='../index.php'">
                     <td><img src="../images/Ellipse 1.png" alt="lead profile image" class="profileImage">Eashrat Jahan Anne</td>
                     <td>Inactive</td>
                   </tr>

@@ -6,9 +6,9 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="../style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <script src="myFunction.js"></script>
+        <script src="../myFunction.js"></script>
         <script src="http://www.w3schools.com/lib/w3data.js"></script>
         
         
@@ -20,16 +20,28 @@
         
         
     </head>
-    <body onload="document.getElementById('defaultOpen').click();">
-        <div w3-include-html="navbar.html"></div> 
+    <body >
+      
 
-        <script>
-          w3IncludeHTML();
-        </script>
-
-<div id="main">
-    <h1>Settings</h1>
-
+        <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col">Project</th>
+                <th  scope="col">Lead</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr onclick="window.location='projectInfoPage.php'">
+                <td>Wedding Ceremony</td>
+                <td><img src="images/Ellipse 1.png" alt="lead profile image" class="profileImage"></td>
+              </tr>
+              <tr onclick="window.location='projectInfoPage.php'">
+                <td>Funeral </td>
+                <td><img src="images/Ellipse 1.png" alt="lead profile image" class="profileImage"></td>
+              </tr>
+              
+            </tbody>
+          </table>
       
     </body>
 </html>

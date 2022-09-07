@@ -20,7 +20,7 @@
 
     </head>
     <body onload="document.getElementById('defaultOpen').click();">
-      <div w3-include-html="navbar.html"></div> 
+      <div w3-include-html="navbar.php"></div> 
 
       <script>
         w3IncludeHTML();
@@ -40,29 +40,29 @@
               </div>
               
               <div id="To Do" class="tabcontent">
-                <div w3-include-html="myWorks/Todo.html"></div> 
+                <div w3-include-html="myWorks/todo.php"></div> 
 
               </div>
               
               <div id="Ongoing" class="tabcontent">
                 
-                <div w3-include-html="myWorks/ongoing.html"></div> 
+                <div w3-include-html="myWorks/ongoing.php"></div> 
                
               </div>
               
               <div id="Completed" class="tabcontent">
-                <div w3-include-html="myWorks/completed.html"></div> 
+                <div w3-include-html="myWorks/completed.php"></div> 
               </div>
 
               <div id="Overdue" class="tabcontent">
-                <div w3-include-html="myWorks/overdue.html"></div> 
+                <div w3-include-html="myWorks/overdue.php"></div> 
               </div>
 
 
           </div>
 
           <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div w3-include-html="myWorksTaskData.html"></div> </div> 
+            <div w3-include-html="myWorksTaskData.php"></div> </div> 
 
     </body>
 </html>

@@ -21,27 +21,28 @@
         
     </head>
     <body >
-      
-
         <table class="table table-hover">
             <thead>
               <tr>
-                <th scope="col">Project</th>
-                <th  scope="col">Lead</th>
+                <th scope="col">File Name</th>
+                <th scope="col">File Type</th>
               </tr>
             </thead>
             <tbody>
-              <tr onclick="window.location='projectInfoPage.html'">
-                <td>Wedding Ceremony</td>
-                <td><img src="images/Ellipse 1.png" alt="lead profile image" class="profileImage"></td>
+              <tr onclick="window.location='index.php'">
+                <td>Caterer Receipt</td>
+                <td>pdf file</td>
               </tr>
-              <tr onclick="window.location='projectInfoPage.html'">
-                <td>Funeral </td>
-                <td><img src="images/Ellipse 1.png" alt="lead profile image" class="profileImage"></td>
+              <tr onclick="window.location='index.php'">
+                <td>Lights Receipt</td>
+                <td>pdf file</td>
               </tr>
-              
             </tbody>
           </table>
+          <hr>
+          <input type="file" id="myfile" name="myfile" >
+
+        
       
     </body>
 </html>

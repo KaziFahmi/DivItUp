@@ -33,7 +33,7 @@
               </tr>
             </thead>
             <tbody>
-              <tr onclick="window.location='index.html'">
+              <tr onclick="window.location='index.php'">
                 <tr><td>Setup</td>
                     <td>Caterer Contact</td><td>10/09/2022</td>
                     <td><img src="images/Ellipse 1.png" alt="lead profile image" class="profileImage"></td>
@@ -42,7 +42,7 @@
                     <td>Venue Contact</td>
                     <td>08/09/2022</td><td><img src="images/Ellipse 1.png" alt="lead profile image" class="profileImage"></td></tr>
               </tr>
-              <tr onclick="window.location='index.html'">
+              <tr onclick="window.location='index.php'">
                 <tr><td>Decoration</td>
                     <td>Design</td><td>10/09/2022</td>
                     <td><img src="images/Ellipse 1.png" alt="lead profile image" class="profileImage"></td>
@@ -60,7 +60,7 @@
           
           <!-- Modal -->
           <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div w3-include-html="../createTask.html"></div> </div> 
+            <div w3-include-html="../createTask.php"></div> </div> 
       
     </body>
 </html>

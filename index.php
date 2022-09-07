@@ -16,15 +16,11 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body style="background-color:#E9E9E9; ">
-<label class="LogInLogo">DivItUp</label><label class="topSignup logoset">Already Have an account? <button class="botol" onclick="window.location.href ='index.html'">Log In </button> </label>
+<label class="LogInLogo">DivItUp</label><label class="topSignup logoset">Don’t Have an account? <button class="botol" onclick="window.location.href ='signup.php'">Sign Up</button> </label>
 <div class="container ">
   
-  <form action="/action_page.php" class="logInForm">
-      <h2 style="color: #076A96; text-align: center; font-weight: bold;margin-bottom: 35px;">Let's Go!</h2>
-      <div class="form-group formSetup">
-        <label for="email">Full Name:</label>
-        <input type="name" class="form-control" id="name" placeholder="Enter Your Name" name="name">
-      </div>
+  <form action="dashboard.php" class="logInForm">
+      <h2 style="color: #076A96; text-align: center; font-weight: bold;margin-bottom: 35px;">Welcome Back!!!</h2>
     <div class="form-group formSetup">
       <label for="email">Email:</label>
       <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
@@ -33,16 +29,11 @@
       <label for="pwd">Password:</label>
       <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
     </div>
-
-    <div class="form-group formSetup">
-        <label for="pwd">Confirm Password:</label>
-        <input type="password" class="form-control" id="pwd" placeholder="Re-enter password" name="pswd">
-      </div>
     <div class="form-group formSetup">
         <a href="" style="color: #076A96;">Forgot Password?</a>
     </div>
-    <button type="submit" class="btn formSetup" style="background-color: #076A96; color: white;margin-bottom: 5px;">Sign Up</button>
-    <button type="submit" class="btn formSetup" style="background-color: #b9b9b9; color: black;margin-bottom: 25px;">Sign Up With Google</button><br>
+    <button  onclick="window.location.href ='dashboard.php'"  class="btn logButton" style="background-color: #076A96; color: white;margin-bottom: 5px;">Log In</button>
+    <button type="submit" class="btn formSetup" style="background-color: #b9b9b9; color: black;margin-bottom: 25px;">Log In With Google</button><br>
   </form>
 </div>
 

@@ -59,7 +59,7 @@
 </head>
 
 <body onload="onclick= openTab(event, 'Notice Board')">
-  <div w3-include-html="navbar.html"></div>
+  <div w3-include-html="navbar.php"></div>
 
   <script>
     w3IncludeHTML();

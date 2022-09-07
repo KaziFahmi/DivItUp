@@ -37,19 +37,19 @@
       <li class="options">
         <a type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="images/Ellipse 1.png" alt="" /></a>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="profilePage.html"><img src="images/Ellipse 1.png" alt="" /> Shahil Yasar Haque</a>
-          <a class="dropdown-item" href="settings.html">Settings</a>
-          <a class="dropdown-item" href="index.html">Log Out</a>
+          <a class="dropdown-item" href="profilePage.php"><img src="images/Ellipse 1.png" alt="" /> Shahil Yasar Haque</a>
+          <a class="dropdown-item" href="settings.php">Settings</a>
+          <a class="dropdown-item" href="index.php">Log Out</a>
         </div>
       </li>
       <li class="options">
         <a type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#home"><img src="images/Notifications.png" alt="" /></a>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="profilePage.html"><img src="images/Ellipse 1.png" alt="" /> Shahil Yasar Haque</a>
+          <a class="dropdown-item" href="profilePage.php"><img src="images/Ellipse 1.png" alt="" /> Shahil Yasar Haque</a>
         </div>
       </li>
       <li class="options">
-        <a href="settings.html"><img src="images/Settings.png" alt="" /></a>
+        <a href="settings.php"><img src="images/Settings.png" alt="" /></a>
       </li>
 
       <a href="javascript:void(0);" class="icon" onclick="myFunction()"
@@ -64,10 +64,10 @@
         <input type="text" placeholder="Search.." name="search" />
         <button type="submit"><i class="fa fa-search"></i></button>
       </form>
-      <a class="siOp" href="dashboard.html">Dashboard</a>
-      <a class="siOp" href="myWorks.html">My Works</a>
-      <a class="siOp" href="project.html">Projects</a>
-      <a class="siOp" href="people.html">People</a>
+      <a class="siOp" href="dashboard.php">Dashboard</a>
+      <a class="siOp" href="myWorks.php">My Works</a>
+      <a class="siOp" href="project.php">Projects</a>
+      <a class="siOp" href="people.php">People</a>
     </div>
     <!--Side bar-->
 
