@@ -100,6 +100,20 @@
         function setCompanyLocation($companyLocation){
             $this->companyLocation = $companyLocation;
         }
+
+        // query
+
+        public static function insertUser($user, $connect){
+            $insertQuery = $connect->prepare("INSERT INTO user (user_id, first_name, last_name, password, email)
+            VALUES (?, ?, ?, ?, ?);");
+            $id = $user->getId();
+            $firstName = $user->getFirstName();
+            $lastName = $user->getLastName();
+            $password = $user->getPassword();
+            $email = $user->getEmail();
+            $insertQuery->bind_param("issss", $id, $firstName, $lastName, $password, $email);
+            $insertQuery->execute();
+        }
         
     }
 ?>

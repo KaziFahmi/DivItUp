@@ -26,6 +26,14 @@
 
   </head>
   <body>
+  <?php
+      // checking session
+      // session_start();
+      // if($_SESSION['id'] == NULL){
+      //   header(location:index.php);
+      // }
+    ?>
+
     <!--Nav bar-->
     <div class="topnav" id="myTopnav">
       <a href="#home" class="openbtn" onclick="sideAccess()"
@@ -39,7 +47,7 @@
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
           <a class="dropdown-item" href="profilePage.php"><img src="images/Ellipse 1.png" alt="" /> Shahil Yasar Haque</a>
           <a class="dropdown-item" href="settings.php">Settings</a>
-          <a class="dropdown-item" href="index.php">Log Out</a>
+          <a class="dropdown-item" href="signout.php">Log Out</a>
         </div>
       </li>
       <li class="options">
