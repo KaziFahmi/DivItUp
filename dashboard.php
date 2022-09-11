@@ -25,13 +25,14 @@
 
     <?php
       // checking session
-      session_start();
-      if(!isset($_SESSION['id']) || empty($_SESSION['id'])) {
-        header("location:index.php");
-     }
+    //   session_start();
+    //   if(!isset($_SESSION['id']) || empty($_SESSION['id'])) {
+    //     header("location:index.php");
+    //  }
     ?>
 
-    <div w3-include-html="navbar.php"></div>
+    <!-- <div w3-include-html="navbar.php"></div> -->
+    <?php include 'navbar.php'; ?>
 
     <script>
       w3IncludeHTML();
@@ -45,7 +46,7 @@
     <div id="main">     
       <h1 >Dashboard</h1>
 
-      <?php echo $_SESSION['id']; ?>
+      <?php // echo $_SESSION['id']; ?>
       <div class="row justify-content-between" style="padding-left: 50px;">
         <div class="col-5 " >
           <h2>Notice Board</h2>

@@ -2,9 +2,10 @@
     include '../classes/userClass.php';
     include '../classes/queryClass.php';
     include '../dbconnect.php';
-
-    $res = mysqli_query($connect, 'SELECT COUNT(*) FROM user');
-    $id = $res->fetch_assoc()['COUNT(*)'] + 1;
+    
+    $query = $connect->prepare('SELECT COUNT(*) FROM user');
+    $query->execute();
+    $id = $query->get_result()->fetch_assoc()['COUNT(*)'] + 1;
 
     $firstName = $_POST['fname'];
     $lastName = $_POST['lname'];

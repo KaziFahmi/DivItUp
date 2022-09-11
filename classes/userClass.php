@@ -105,7 +105,7 @@
 
         public static function insertUser($user, $connect){
             $insertQuery = $connect->prepare("INSERT INTO user (user_id, first_name, last_name, password, email)
-            VALUES (?, ?, ?, ?, ?);");
+            VALUES (?, ?, ?, ?, ?)");
             $id = $user->getId();
             $firstName = $user->getFirstName();
             $lastName = $user->getLastName();
@@ -114,6 +114,5 @@
             $insertQuery->bind_param("issss", $id, $firstName, $lastName, $password, $email);
             $insertQuery->execute();
         }
-        
     }
 ?>
