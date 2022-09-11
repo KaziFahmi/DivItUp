@@ -25,11 +25,11 @@
 
         <table class="table table-hover">
             <tbody>
-              <tr onclick="window.location='index.php'"> 
+              <tr onclick="window.location='person.php'"> 
                 <td><img src="images/Ellipse 1.png" alt="lead profile image" class="profileImage"> Eashrat Jahan Anne</td>
                
               </tr>
-              <tr onclick="window.location='index.php'"> 
+              <tr onclick="window.location='person.php'"> 
                 <td><img src="images/Ellipse 1.png" alt="lead profile image" class="profileImage"> S.M Jishanul Islam</td>
                
               </tr>

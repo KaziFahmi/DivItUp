@@ -13,10 +13,7 @@
         
         
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
-        <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
-
+        
       
         
     </head>
@@ -46,7 +43,7 @@
         
         <!-- Modal -->
         <div class="modal fade" id="leaveRequest" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" >
-         <?php include "leaveRequest.php"?> </div> 
+         <?php include "projectInfo/leaveRequest.php"?> </div> 
        
       </div>
       <div id="Task_Structure" class="tabcontent">

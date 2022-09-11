@@ -33,10 +33,9 @@
 
     <!--Main Body-->
     <div id="main">
-      <h2 style="color:#076A96">Account</button></h2>
+      <h2 style="color:#076A96">Account<button class="fa-solid fa-user-plus addpeepsbtn"></button></h2>
       <div class="column" style="width: 20%;">
         <img src="images/Ellipse 1.png" style="width: 140px; border-radius:50% ;border: 1px solid #676767;">
-        <button class="fa-solid fa-pen profileImgUp" ></button>
       </div>
         <div class="column" >
           <label style="color: #676767; font-size: 20px ;">Full Name</label><label style="color: red;">*</label><br>
@@ -54,7 +53,6 @@
           <label style="color: #676767; font-size: 20px ;">Email</label><label style="color: red;">*</label><br>
           <input class="profIn" type="email" name="email" id="email"><br>
           <br>
-          <button class="btn btn-primary"style="margin-left: 64%;">Save</button>
         </div>
 
     </div>
