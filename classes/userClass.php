@@ -1,9 +1,7 @@
 <?php
     class User{
         private $id;
-        private $firstName;
-        private $middleName;
-        private $lastName;
+        private $name;
         private $profilePicture;
         private $password;
         private $email;
@@ -13,10 +11,9 @@
         private $companyName;
         private $companyLocation;
 
-        function __construct($id, $firstName, $lastName, $password, $email){
+        function __construct($id, $name, $password, $email){
             $this->id = $id;
-            $this->firstName = $firstName;
-            $this->lastName = $lastName;
+            $this->name = $name;
             $this->password = $password;
             $this->email = $email;
         }
@@ -24,23 +21,11 @@
         function getId(){
             return $this->id;
         }
-        function getFirstName(){
-            return $this->firstName;
+        function getName(){
+            return $this->name;
         }
-        function setFirstName($firstName){
-            $this->firstName = $firstName;
-        }
-        function getMiddleName(){
-            return $this->middleName;
-        }
-        function setMiddleName($middleName){
-            $this->middleName = $middleName;
-        }
-        function getLastName(){
-            return $this->lastName;
-        }
-        function setLastName($lastName){
-            $this->lastName = $lastName;
+        function setName($name){
+            $this->name = $name;
         }
         function getProfilePicture(){
             return $this->profilePicture;
@@ -104,15 +89,39 @@
         // query
 
         public static function insertUser($user, $connect){
-            $insertQuery = $connect->prepare("INSERT INTO user (user_id, first_name, last_name, password, email)
+            $insertQuery = $connect->prepare("INSERT INTO user (user_id, name, password, email, profile_picture)
             VALUES (?, ?, ?, ?, ?)");
             $id = $user->getId();
-            $firstName = $user->getFirstName();
-            $lastName = $user->getLastName();
+            $name = $user->getName();
             $password = $user->getPassword();
             $email = $user->getEmail();
-            $insertQuery->bind_param("issss", $id, $firstName, $lastName, $password, $email);
+            $profilePicture = $user->getProfilePicture();
+            $insertQuery->bind_param("issss", $id, $name, $password, $email, $profilePicture);
             $insertQuery->execute();
+        }
+        public static function readUser($email, $connect){
+            $readQuery = $connect->prepare("SELECT * FROM user WHERE email = ?");
+            $readQuery->bind_param("s", $email);
+            $readQuery->execute();
+            $result = $readQuery->get_result()->fetch_assoc();
+            $user = new User($result['user_id'], $result['name'], $result['password'], $result['email']);
+            if($result['job_title'] != null){
+                $user->setJobTitle($result['job_title']);
+            }
+            if($result['department_name'] != null){
+                $user->setDepartment($result['department_name']);
+            }
+            if($result['company_name'] != null){
+                $user->setCompanyName($result['company_name']);
+            }
+            if($result['company_location'] != null){
+                $user->setCompanyLocation($result['company_location']);
+            }
+            if($result['profile_picture'] != null){
+                $user->setProfilePicture($result['profile_picture']);
+            }
+            return $user;
+
         }
     }
 ?>

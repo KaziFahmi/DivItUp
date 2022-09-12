@@ -6,7 +6,7 @@
     // include 'imageClass.php';
     // include 'queryClass.php';
     // include 'taskClass.php';
-    // include 'userClass.php';
+    include 'userClass.php';
     class Query{
         public static function insertBudget($eventId, $budget, $connect){
             $insertQuery = $connect->prepare("INSERT INTO user (item_name, units, estimated_unit_price, actual_unit_price, date_expended, date_issued, event_id)
@@ -120,6 +120,11 @@
             $insertQuery->bind_param("sii",$deparment, $userId, $eventId, $connect);
             $insertQuery->execute();
         }
+
+
+
+
+        
 
     }
 

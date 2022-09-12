@@ -32,12 +32,8 @@
   <form action="createUser.php" class="logInForm" method="post" id = "signUpForm">
       <h2 style="color: #076A96; text-align: center; font-weight: bold;margin-bottom: 35px;">Let's Go!</h2>
       <div class="form-group formSetup">
-        <label for="fname">First Name:</label>
-        <input type="name" class="form-control" id="fname" placeholder="Enter First Name" name="fname" required>
-      </div>
-      <div class="form-group formSetup">
-        <label for="lname">Last Name:</label>
-        <input type="name" class="form-control" id="lname" placeholder="Enter Last Name" name="lname" required>
+        <label for="name">Full Name:</label>
+        <input type="name" class="form-control" id="name" placeholder="Enter Full Name" name="name" required>
       </div>
     <div class="form-group formSetup">
       <label for="email">Email:</label>
@@ -57,6 +53,7 @@
     <div class="form-group formSetup">
         <a href="" style="color: #076A96;">Forgot Password?</a>
     </div>
+    <label for="signUpButton" style = "color:red;font-size:12px" id = "emptyFieldsMessage" style="text-align: center"></label>
     <button type = "submit" class="btn formSetup" style="background-color: #076A96; color: white;margin-bottom: 5px;" id = "signUpButton">Sign Up</button>
     <button class="btn formSetup" style="background-color: #b9b9b9; color: black;margin-bottom: 25px;">Sign Up With Google</button><br>
   </form>

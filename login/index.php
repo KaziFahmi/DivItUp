@@ -37,6 +37,7 @@
     <div class="form-group formSetup">
         <a href="" style="color: #076A96;">Forgot Password?</a>
     </div>
+    <label for="loginButton" style = "color:red;font-size:12px" id = "emptyFieldsMessage" style="text-align: center"></label>
     <button type="submit" class="btn logButton" style="background-color: #076A96; color: white;margin-bottom: 5px;" id="loginButton">Log In</button>
     <button type="submit" class="btn formSetup" style="background-color: #b9b9b9; color: black;margin-bottom: 25px;" id = "">Log In With Google</button><br>
   </form>

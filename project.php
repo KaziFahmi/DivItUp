@@ -33,13 +33,13 @@
     <div class="tab">
         <button class="tablinks" onclick="openTab(event, 'Recent')" id="defaultOpen">Recent Events</button>
         <button class="tablinks" onclick="openTab(event, 'Completed')">Completed Events</button>
-        <button type="button" class="createProject" data-toggle="modal" data-target="#exampleModal" onclick="document.getElementById('defaultOpen2').click()">
+        <button type="button" class="createProject" data-toggle="modal" data-target="#exampleModal" >
           Create Events +
         </button>
         
         <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div w3-include-html="projects/createProject.php"></div> 
+        <?php include "projects/createProject.php"; ?>
 
         <script>
           w3IncludeHTML();
@@ -50,12 +50,14 @@
       </div>
       
       <div id="Recent" class="tabcontent">
-        <div w3-include-html="projects/recProj.php"></div> 
+        <!-- <div w3-include-html="projects/recProj.php"></div>  -->
+        <?php include "projects/recProj.php"; ?>
       </div>
       
       <div id="Completed" class="tabcontent">
 
-        <div w3-include-html="projects/recProj.php"></div> 
+        <!-- <div w3-include-html="projects/recProj.php"></div>  -->
+        <?php include "projects/comProj.php"; ?>
         
       </div>
 

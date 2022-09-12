@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 07, 2022 at 06:01 AM
--- Server version: 10.4.22-MariaDB
--- PHP Version: 8.0.14
+-- Generation Time: Sep 12, 2022 at 10:32 AM
+-- Server version: 10.4.24-MariaDB
+-- PHP Version: 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -46,7 +46,8 @@ CREATE TABLE `budget` (
 CREATE TABLE `comments` (
   `content` varchar(500) NOT NULL,
   `task_id` int(11) NOT NULL,
-  `user_id` int(11) NOT NULL
+  `user_id` int(11) NOT NULL,
+  `time` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -109,7 +110,8 @@ CREATE TABLE `event_departments` (
 CREATE TABLE `messages` (
   `content` varchar(1500) NOT NULL,
   `user_id` int(11) NOT NULL,
-  `event_id` int(11) NOT NULL
+  `event_id` int(11) NOT NULL,
+  `time` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -121,7 +123,8 @@ CREATE TABLE `messages` (
 CREATE TABLE `notification` (
   `summary` varchar(100) NOT NULL,
   `openLink` varchar(50) NOT NULL,
-  `user_id` int(11) NOT NULL
+  `user_id` int(11) NOT NULL,
+  `time` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -138,7 +141,8 @@ CREATE TABLE `task` (
   `deadline` datetime NOT NULL,
   `status` varchar(50) NOT NULL,
   `event_id` int(11) NOT NULL,
-  `user_id` int(11) NOT NULL
+  `user_id` int(11) NOT NULL,
+  `time` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -148,9 +152,7 @@ CREATE TABLE `task` (
 --
 
 CREATE TABLE `user` (
-  `first_name` varchar(50) NOT NULL,
-  `last_name` varchar(50) NOT NULL,
-  `middle_name` varchar(50) DEFAULT NULL,
+  `name` varchar(50) NOT NULL,
   `password` varchar(50) NOT NULL,
   `job_title` varchar(50) DEFAULT NULL,
   `department_name` varchar(50) DEFAULT NULL,
@@ -162,6 +164,16 @@ CREATE TABLE `user` (
   `profile_picture_name` varchar(50) DEFAULT NULL,
   `profile_picture_file_type` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`name`, `password`, `job_title`, `department_name`, `company_name`, `company_location`, `user_id`, `email`, `profile_picture`, `profile_picture_name`, `profile_picture_file_type`) VALUES
+('syh', '$2y$10$ALe1LIOrKy3sM1ENVY8iv.3cjWvbwkbub.bPeC6guk9', NULL, NULL, NULL, NULL, 1, 'syh@gmail.com', NULL, NULL, NULL),
+('syh', '$2y$10$3pzJcZy.fs/uFqc9a3K7PO9XutpZ/BfgMFqt3XkVSVH', NULL, NULL, NULL, NULL, 2, 'syh2@gmail.com', NULL, NULL, NULL),
+('syh', '$2y$10$.FyVfk/revm79elNG0085.OJMuSxAZ6golDoYKVa2b0', NULL, NULL, NULL, NULL, 3, 'syh3@gmail.com', NULL, NULL, NULL),
+('syh', '$2y$10$jQ/1ax9gDVqismvTSVNpvu2VPdw9YwGxziUqKjWIViB', NULL, NULL, NULL, NULL, 4, 'syh4@gmail.com', NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
