@@ -19,7 +19,6 @@
             $dateissued=$budget->getDateIssued();
 
 
-
             $insertQuery->bind_param("siddss",$itemname , $units, $estimatedunitprice, $actualunitprice ,$dateexpended ,$dateissued , $eventId);
             $insertQuery->execute();
         }
@@ -120,7 +119,6 @@
             $insertQuery->bind_param("sii",$deparment, $userId, $eventId, $connect);
             $insertQuery->execute();
         }
-
 
 
 

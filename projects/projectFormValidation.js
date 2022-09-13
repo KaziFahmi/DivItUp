@@ -3,24 +3,9 @@ const summary = $('#summary').val();
 const coverPhoto = $('#coverPhoto').val();
 const deadline = $('#deadline').val();
 
-function changeImage(){
-    alert('asdfafd');
-}
-
-function readURL(input) {
-    if (input.files && input.files[0]) {
-        var reader = new FileReader();
-
-        reader.onload = function (e) {
-            $('#blah')
-                .attr('src', e.target.result)
-                .width(150)
-                .height(200);
-        };
-
-        reader.readAsDataURL(input.files[0]);
-    }
-}
+$('#projectSubmit').click(function(e) {
+    e.preventDefault();
+});
 
 
 // $('#loginButton').click(function(e) {

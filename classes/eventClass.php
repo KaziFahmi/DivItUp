@@ -1,22 +1,22 @@
 <?php
     class Event{
-        //boards er part ana lagbe
         private $id;
         private $name;
+        private $description;
         private $deadline;
         private $creatorId;
         private $eventLogo;
-        private $documents = array('unassigned' => array());
+        private $documents;
         private $tasks = array();
         private $budgets = array();
         // private $employees = array();
-        private $departments;
+        private $departments = array('unassigned' => array());;
         private $boards = array();
 
-        function __construct($id, $name, $summary, $creatorId){
+        function __construct($id, $name, $description, $creatorId){
             $this->id = $id;
             $this->name - $name;
-            $this->summary = $summary;
+            $this->description = $description;
             $this->creatorId = $creatorId;
         }
         // id
@@ -192,6 +192,31 @@
             }
             $this->boards = $newBoards;
         }
+        public static function insertEvent($event, $connect){
+            $column = "INSERT INTO event (event_id, name, description, event_logo, status, email";
+            $value = "VALUES (?, ?, ?, ?, ?, ?";
+            if($event->getDeadline() != false){
+                $column = $column . ", deadline";
+                $value = $value . ", ?";
+            }
+            $query = $column . ")" . $value . "))";
+            
+            $insertQuery = $connect->prepare($query);
+            
+            $id=$event->getId();
+            $name=$event->getName();
+            $summary=$event->getSummary();
+            $creatorid=$event->getCreatorId();
+            $deadline = $event->getDeadline();
+            $eventLogo = $event->getEventLogo();
+
+            $insertQuery = $connect->prepare("INSERT INTO event (event_id, name, summary, creatorId)
+            VALUES (?, ?, ?, ?)");
+
+            $insertQuery->bind_param("ississ",$id, $name, $summary, $creatorid, $deadline, $eventLogo);
+            $insertQuery->execute();
+        }
+
         public static function getEmployees($eventId, $connect){
             $eventQuery = $connect->prepare('SELECT email FROM works_in where event_id = ?');
             $eventQuery->bind_param("i", $eventId);

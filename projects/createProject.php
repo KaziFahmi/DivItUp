@@ -16,14 +16,6 @@
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
-
-        <link class="jsbin" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
-        <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-        <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
-        <style>
-          article, aside, figure, footer, header, hgroup, 
-          menu, nav, section { display: block; }
-        </style>
         <script defer src="projectFormValidation.js"></script>
     </head>
     <body >
@@ -38,15 +30,14 @@
               </div>
               <div class="modal-body">
               <div class="form-group">
-              <figure>
-                <img id="logo" src="#" alt="User placeholder" height="100">
-                <!-- <input type="file" id="coverPhoto" name="coverPhoto" onchange="readURL(this);"> -->
-                <input type='file' onchange="readURL(this);" />
+          </div enctype="multipart/form-data" id = "projectForm">
+              <form action="projects/projectCreate.php" method="POST" enctype="multipart/form-data">
+                <!-- <figure>
+                  <img id="logo" src="#" alt="User placeholder" height="100">
+                  <input type='file' />
                 <figcaption>Event Cover</figcaption>
-              </figure>
-          </div>
-              <form action="createProject.php" method="POST" enctype="multipart/form-data">
-              <label for="projectName">Event Name</label><label style="color: red;">*</label><br>
+              </figure> -->
+                <label for="projectName">Event Name</label><label style="color: red;">*</label><br>
                 <input type="text" id="projectName" name="projectName" size="48"><br>
                 <label for="">Summary</label><label style="color: red;">*</label><br>
                 <textarea id="summary" name="summary" rows="2" cols="50" placeholder="Enter summary"></textarea>
@@ -95,7 +86,7 @@
                 </div>
 
                 <div class="modal-footer">
-                  <button type="submit" class="btn btn-primary">Save changes</button>
+                  <button type="submit" class="btn btn-primary" id="projectSubmit" onclick="changeImage()">Save changes</button>
                 </div>
               </form>
 

@@ -1,6 +1,5 @@
 <?php
     class User{
-        private $id;
         private $name;
         private $profilePicture;
         private $password;
@@ -11,15 +10,10 @@
         private $companyName;
         private $companyLocation;
 
-        function __construct($id, $name, $password, $email){
-            $this->id = $id;
+        function __construct($name, $password, $email){
             $this->name = $name;
             $this->password = $password;
             $this->email = $email;
-        }
-        
-        function getId(){
-            return $this->id;
         }
         function getName(){
             return $this->name;
@@ -41,9 +35,6 @@
         }
         function getEmail(){
             return $this->email;
-        }
-        function setEmail($email){
-            $this->email = $email;
         }
         function getSkills(){
             return $this->skills;
@@ -89,14 +80,13 @@
         // query
 
         public static function insertUser($user, $connect){
-            $insertQuery = $connect->prepare("INSERT INTO user (user_id, name, password, email, profile_picture)
-            VALUES (?, ?, ?, ?, ?)");
-            $id = $user->getId();
+            $insertQuery = $connect->prepare("INSERT INTO user (name, password, email, profile_picture)
+            VALUES (?, ?, ?, ?)");
             $name = $user->getName();
             $password = $user->getPassword();
             $email = $user->getEmail();
             $profilePicture = $user->getProfilePicture();
-            $insertQuery->bind_param("issss", $id, $name, $password, $email, $profilePicture);
+            $insertQuery->bind_param("ssss",$name, $password, $email, $profilePicture);
             $insertQuery->execute();
         }
         public static function readUser($email, $connect){
@@ -104,7 +94,7 @@
             $readQuery->bind_param("s", $email);
             $readQuery->execute();
             $result = $readQuery->get_result()->fetch_assoc();
-            $user = new User($result['user_id'], $result['name'], $result['password'], $result['email']);
+            $user = new User($result['name'], $result['password'], $result['email']);
             if($result['job_title'] != null){
                 $user->setJobTitle($result['job_title']);
             }
@@ -132,7 +122,5 @@
             }
             return $events;
         }
-
     }
-
 ?>

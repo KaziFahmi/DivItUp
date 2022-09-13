@@ -2,7 +2,7 @@
     include '../dbconnect.php';
     $email = $_POST['email'];
     $password = $_POST['password'];
-    $query = $connect->prepare("SELECT COUNT(*), password, user_id FROM user WHERE email = ?");
+    $query = $connect->prepare("SELECT COUNT(*), password FROM user WHERE email = ?");
     $query->bind_param("s", $email);
     $query->execute();
     $result = $query->get_result();
