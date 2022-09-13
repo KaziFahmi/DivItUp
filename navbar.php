@@ -35,7 +35,7 @@
       <li class="options">
         <a type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo '<img src="data:image/jpeg;base64,'.$user->getProfilePicture().'" class="imagesmol"/>'; ?></a>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="profilePage.php"><img src="images/Ellipse 1.png" alt="" /> <?php echo $user->getName(); ?> </a>
+          <a class="dropdown-item" href="profilePage.php"><?php echo '<img src="data:image/jpeg;base64,'.$user->getProfilePicture().'" class="imagesmol"/>'; ?> <?php echo $user->getName(); ?> </a>
           <a class="dropdown-item" href="settings.php">Settings</a>
           <a class="dropdown-item" href="signout.php">Log Out</a>
         </div>

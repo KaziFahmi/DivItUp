@@ -192,6 +192,17 @@
             }
             $this->boards = $newBoards;
         }
+        public static function getEmployees($eventId, $connect){
+            $eventQuery = $connect->prepare('SELECT email FROM works_in where event_id = ?');
+            $eventQuery->bind_param("i", $eventId);
+            $people = array();
+            $result = $eventQuery->get_result();
+            while($row = $result->fetch_assoc($result)){
+                array_push($people, $row['email']);
+            }
+            return $people;
+        }
+    }
 
         //employee
         // function getEmployees(){

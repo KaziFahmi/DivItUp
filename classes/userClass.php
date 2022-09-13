@@ -121,7 +121,16 @@
                 $user->setProfilePicture($result['profile_picture']);
             }
             return $user;
-
         }
+        public static function getEvents($email, $connect){
+            $eventQuery = $connect->prepare('SELECT event_id FROM works_in where email = ?');
+            $eventQuery->bind_param("s", $email);
+            $events = array();
+            $result = $eventQuery->get_result();
+            while($row = $result->fetch_assoc($result)){
+                array_push($events, $row['event_id']);
+            }
+            return $events;
+
     }
 ?>
