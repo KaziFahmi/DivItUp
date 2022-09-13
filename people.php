@@ -20,8 +20,12 @@
   <body onload="document.getElementById('defaultOpen').click();">
   <?php
     include 'navbar.php';
+    include 'dbconnect.php';
+    $events = User:: getEvents($user->getEmail(), $connect);
   ?>
   
+
+
     <!--Main Body-->
     <div id="main">
       <h1>People</h1>

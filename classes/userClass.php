@@ -115,6 +115,7 @@
         public static function getEvents($email, $connect){
             $eventQuery = $connect->prepare('SELECT event_id FROM works_in where email = ?');
             $eventQuery->bind_param("s", $email);
+            $eventQuery->execute();
             $events = array();
             $result = $eventQuery->get_result();
             while($row = $result->fetch_assoc($result)){

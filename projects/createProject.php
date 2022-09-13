@@ -41,8 +41,15 @@
                 <input type="text" id="projectName" name="projectName" size="48"><br>
                 <label for="">Summary</label><label style="color: red;">*</label><br>
                 <textarea id="summary" name="summary" rows="2" cols="50" placeholder="Enter summary"></textarea>
+
+                <div class="input-group" style="padding-top: 5px;">
+                  <div id="search-autocomplete" class="form-outline">
+                    <input type="text" id="department" class="form-control" placeholder="Add Deapartments" />
+                  </div>
+                  <button type="button" class="btn btn-primary" onclick= "">Add</button>
+                </div>
                     
-                <button class="tablinks2" onclick="openSubTab(event, 'Team');" id="defaultOpen2">Team Members</button>
+                <!-- <button class="tablinks2" onclick="openSubTab(event, 'Team');" id="defaultOpen2">Team Members</button>
                 <button class="tablinks2" onclick="openSubTab(event, 'Department')">Departments</button>
 
                 <div id="Team" class="tabcontent2">
@@ -65,20 +72,36 @@
                          Add 
                         </button>
                       </div>
-                </div>
+                </div> -->
 
                 <div>
                     <table class="table table-hover">
                         <tr>
-                            <td><img src="images/Ellipse 1.png" alt="lead profile image" class="profileImage">Shahil Yasar Haque</td>
-                            <td>Invited</td>
-                        </tr>
-                        <tr>
-                            <td><img src="images/Ellipse 1.png" alt="lead profile image" class="profileImage">Eashrat Jahan</td>
-                            <td>Member</td>
+                            <td>Shahil Yasar Haque</td>
                         </tr>
                     </table>
                 </div>
+
+                <div style="display:none;">
+                  <table id="new_table">
+                    <tr id="">
+                      <td ></td>
+                    </tr>
+                  </table>
+                </div>
+
+                <script>
+                  jQuery(document).delegate('a.add-record', 'click', function(e) {
+                    e.preventDefault();    
+                    var content = jQuery('#new_table tr'),
+                    size = jQuery('#tbl_posts >tbody >tr').length + 1,
+                    element = null,    
+                    element = content.clone();
+                    element.find('.delete-record').attr('data-id', size);
+                    element.appendTo('#tbl_posts_body');
+                    element.find('.sn').html(size);
+                  });
+                </script>
 
                 <div>
                     <label for="">Deadline</label><br>
