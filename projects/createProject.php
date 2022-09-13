@@ -44,7 +44,7 @@
 
                 <div class="input-group" style="padding-top: 5px;">
                   <div id="search-autocomplete" class="form-outline">
-                    <input type="text" id="department" class="form-control" placeholder="Add Deapartments" />
+                    <input type="text" id="department" class="form-control" placeholder="Add Departments" />
                   </div>
                   <button type="button" class="btn btn-primary" onclick= "">Add</button>
                 </div>
@@ -74,13 +74,13 @@
                       </div>
                 </div> -->
 
-                <div>
+                <!-- <div>
                     <table class="table table-hover">
                         <tr>
                             <td>Shahil Yasar Haque</td>
                         </tr>
                     </table>
-                </div>
+                </div> -->
 
                 <div style="display:none;">
                   <table id="new_table">

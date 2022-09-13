@@ -118,7 +118,7 @@
             $eventQuery->execute();
             $events = array();
             $result = $eventQuery->get_result();
-            while($row = $result->fetch_assoc($result)){
+            while($row = $result->fetch_assoc()){
                 array_push($events, $row['event_id']);
             }
             return $events;

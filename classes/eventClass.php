@@ -11,7 +11,7 @@
         // private $tasks = array();
         // private $budgets = array();
         // private $employees = array();
-        private $departments = array();;
+        private $departments = array();
         private $boards = array();
 
         function __construct($id, $name, $description, $creatorEmail){
@@ -238,7 +238,7 @@
                 $event->setDeadline($result['deadline']);
             }
 
-            $readQuery = $connect->prepare("SELECT * FROM event_board_column WHERE event_id = ?")
+            $readQuery = $connect->prepare("SELECT * FROM event_board_column WHERE event_id = ?");
             $readQuery->bind_param("s", $eventId);
             $readQuery->execute();
             $readQuery->get_result();
@@ -251,6 +251,7 @@
         public static function getEmployees($eventId, $connect){
             $eventQuery = $connect->prepare('SELECT email FROM works_in where event_id = ?');
             $eventQuery->bind_param("i", $eventId);
+            $eventQuery->execute();
             $people = array();
             $result = $eventQuery->get_result();
             while($row = $result->fetch_assoc()){
@@ -258,7 +259,7 @@
             }
             return $people;
         }
-    }
+    
 
         //employee
         // function getEmployees(){
