@@ -131,6 +131,8 @@
                 array_push($events, $row['event_id']);
             }
             return $events;
+        }
 
     }
+
 ?>

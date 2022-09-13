@@ -26,17 +26,61 @@
 
 
   <body onload="document.getElementById('defaultOpen').click();">
-    <div w3-include-html="navbar.php"></div>
+  <?php
+    include 'navbar.php';
+  ?>
+   
 
-    <script>
-      w3IncludeHTML();
-    </script>
-
+    <?php
+        include 'classes/userClass.php';
+        include 'classes/eventClass.php';
+        
+      ?>
+  
     <!--Main Body-->
     <div id="main">
       <h1>People</h1>
 
-      <div class="tab">
+        <div class="dropdown">
+          <button class="btn dropdown-toggle" type="button" data-toggle="dropdown" style="border: 1px solid gray ; margin-bottom: 4px;">Events
+          <span class="caret"></span></button>
+          <?php
+             
+          ?>
+          <ul class="dropdown-menu">
+            <li><a href="#">HTML</a></li>
+            <li><a href="#">CSS</a></li>
+            <li><a href="#">JavaScript</a></li>
+            <li><a href="#">JavaScript</a></li>
+          </ul>
+        </div>
+
+        <table class="table table-hover">
+           <tbody>
+
+             <tr onclick="window.location='person.php'"> 
+               <td><img src="images/Ellipse 1.png" alt="lead profile image" class="profileImage"> Eashrat Jahan Anne</td>
+                    
+              </tr>
+              <tr onclick="window.location='person.php'"> 
+               <td><img src="images/Ellipse 1.png" alt="lead profile image" class="profileImage"> S.M Jishanul Islam</td>
+                    
+              </tr>
+                    
+           </tbody>
+          </table>
+
+
+
+
+
+
+
+
+
+
+
+      <!-- <div class="tab">
         <button class="tablinks" onclick="openTab(event, 'Contacts')" id="defaultOpen">
           Contacts
         </button>
@@ -53,8 +97,14 @@
      
       <div id="TM" class="tabcontent">
         
-        <div w3-include-html="people/teamMem.php"></div> 
+        <div w3-include-html="people/teamMem.php"></div> -->
 
-    </div>
+    </div> 
+
+
+
+
+
+
   </body>
 </html>
