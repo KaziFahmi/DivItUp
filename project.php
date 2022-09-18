@@ -21,7 +21,19 @@
         
     </head>
     <body onload="document.getElementById('defaultOpen').click();">
-        <div w3-include-html="navbar.php"></div> 
+        <?php 
+          include 'navbar.php';
+          include 'dbconnect.php';
+          // include 'classes/userClass.php';
+          include 'classes/eventClass.php';
+          $eventIds = User::getEvents($user->getEmail(), $connect);
+          $events = array();
+          foreach($eventIds as $id){
+            $event = Event::readEvent($id, $connect);
+            array_push($events, $event);
+          }
+
+        ?>
 
         <script>
           w3IncludeHTML();

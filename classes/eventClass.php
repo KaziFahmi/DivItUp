@@ -5,7 +5,6 @@
         private $description;
         private $deadline;
         private $creatorEmail;
-        private $eventLogo;
         private $status;
         // private $documents;
         // private $tasks = array();
@@ -16,7 +15,7 @@
 
         function __construct($id, $name, $description, $creatorEmail){
             $this->id = $id;
-            $this->name - $name;
+            $this->name = $name;
             $this->description = $description;
             $this->creatorEmail = $creatorEmail;
         }
@@ -32,11 +31,11 @@
             $this->name = $name;
         }
         //summary
-        function getSummary(){
-            return $this->summary;
+        function getDescription(){
+            return $this->description;
         }
-        function setSummary($summary){
-            $this->summary = $summary;
+        function setDescription($description){
+            $this->description = $description;
         }
         //deadline
         function getDeadline(){
@@ -47,18 +46,18 @@
         }
         //creatorId
         function getCreatorEmail(){
-            $this->creatorId;
+            return $this->creatorEmail;
         }
         // function setCreatorId($creatorId){
         //     $this->creatorId = $creatorId;
         // }
         //eventLogo
-        function getEventLogo(){
-            return $this->eventLogo;
-        }
-        function setEventLogo($eventLogo){
-            $this->eventLogo = $eventLogo;
-        }
+        // function getEventLogo(){
+        //     return $this->eventLogo;
+        // }
+        // function setEventLogo($eventLogo){
+        //     $this->eventLogo = $eventLogo;
+        // }
         //status
         function getStatus(){
             return $this->status;
@@ -150,7 +149,7 @@
         //     }
         // }
         function addDepartment($department){
-            $departments[$department] = array();
+            array_push($this->departments, $department);
         }
         function removeDepartment($department){
             $newDepartments;
@@ -202,27 +201,46 @@
             $this->boards = $newBoards;
         }
         public static function insertEvent($event, $connect){
-            $column = "INSERT INTO event (event_id, name, description, event_logo, status, email";
-            $value = "VALUES (?, ?, ?, ?, ?, ?";
-            if($event->getDeadline() != false){
+            $column = "INSERT INTO event (event_id, name, description, status, email";
+            $value = "VALUES (?, ?, ?, ?, ?";
+            $type = "issss";
+            if($event->getDeadline() != ""){
                 $column = $column . ", deadline";
                 $value = $value . ", ?";
+                $type = $type . "s";
             }
-            $query = $column . ")" . $value . "))";
+            $query = $column . ")" . $value . ")";
             
             $insertQuery = $connect->prepare($query);
             
             $id=$event->getId();
             $name=$event->getName();
-            $summary=$event->getSummary();
-            $creatorid=$event->getCreatorId();
+            $description=$event->getDescription();
+            $creatorEmail=$event->getCreatorEmail();
+            $status = $event->getStatus();
             $deadline = $event->getDeadline();
-            $eventLogo = $event->getEventLogo();
+            if($event->getDeadline() == ""){
+                $insertQuery->bind_param($type, $id, $name, $description, $status, $creatorEmail);
+            }
+            else{
+                $insertQuery->bind_param($type, $id, $name, $description, $status, $creatorEmail, $deadline);
+            }
+            
+            $insertQuery->execute();
 
-            $insertQuery = $connect->prepare("INSERT INTO event (event_id, name, summary, creatorId)
-            VALUES (?, ?, ?, ?)");
+            foreach($event->getDepartments() as $department){
+                $eventId = $event->getId();
+                $insertQuery = $connect->prepare("INSERT INTO event_departments (department_name, event_id)
+                VALUES (?, ?)");
+                $insertQuery->bind_param("si", $department, $eventId);
+                $insertQuery->execute();
+            }
 
-            $insertQuery->bind_param("ississ",$id, $name, $summary, $creatorid, $deadline, $eventLogo);
+            $insertQuery = $connect->prepare("INSERT INTO works_in (event_id, email)
+            VALUES (?, ?)");
+            $eventId = $event->getId();
+            $email = $event->getCreatorEmail();
+            $insertQuery->bind_param("is", $eventId, $email);
             $insertQuery->execute();
         }
 
@@ -232,16 +250,15 @@
             $readQuery->execute();
             $result = $readQuery->get_result()->fetch_assoc();
             $event = new Event($result['event_id'], $result['name'], $result['description'], $result['email']);
-            $event->setEventLogo($result['event_logo']);
+            // $event->setEventLogo($result['event_logo']);
             $event->setStatus($result['status']);
             if($result['deadline'] == null){
                 $event->setDeadline($result['deadline']);
             }
-
             $readQuery = $connect->prepare("SELECT * FROM event_board_column WHERE event_id = ?");
             $readQuery->bind_param("s", $eventId);
             $readQuery->execute();
-            $readQuery->get_result();
+            $result = $readQuery->get_result();
             while($row = $result->fetch_assoc()){
                 $event->addBoard($row['board_column_name']);
             }
@@ -251,7 +268,6 @@
         public static function getEmployees($eventId, $connect){
             $eventQuery = $connect->prepare('SELECT email FROM works_in where event_id = ?');
             $eventQuery->bind_param("i", $eventId);
-            $eventQuery->execute();
             $people = array();
             $result = $eventQuery->get_result();
             while($row = $result->fetch_assoc()){
@@ -259,7 +275,6 @@
             }
             return $people;
         }
-    
 
         //employee
         // function getEmployees(){

@@ -21,7 +21,10 @@
         
     </head>
     <body >
-      
+        <?php
+          include '../classes/eventClass.php';
+          $events = User::getEvents(, $connect);
+        ?>
 
         <table class="table table-hover">
             <thead>
