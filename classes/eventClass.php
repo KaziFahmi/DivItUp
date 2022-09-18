@@ -268,6 +268,7 @@
         public static function getEmployees($eventId, $connect){
             $eventQuery = $connect->prepare('SELECT email FROM works_in where event_id = ?');
             $eventQuery->bind_param("i", $eventId);
+            $eventQuery->execute();
             $people = array();
             $result = $eventQuery->get_result();
             while($row = $result->fetch_assoc()){
@@ -275,6 +276,20 @@
             }
             return $people;
         }
+
+        public static function getTasks($eventId, $connect){
+            $taskQuery = $connect->prepare('SELECT task_id FROM task where event_id = ?');
+            $taskQuery->bind_param("i", $eventId);
+            $taskQuery->execute();
+            $taskInfo = array();
+            $result = $taskQuery->get_result();
+            while($row = $result->fetch_assoc()){
+                array_push($taskInfo, $row['task_id']);
+            }
+            return $taskInfo;
+        }
+        
+
 
         //employee
         // function getEmployees(){

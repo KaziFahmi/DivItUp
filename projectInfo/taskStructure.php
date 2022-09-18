@@ -1,5 +1,5 @@
 <html>
-    <!-- <head>
+     <head>
         <title>
             DivItup
         </title>
@@ -19,40 +19,53 @@
       
         
         
-    </head> -->
-    <body >
-      
 
-        <table class="table table-hover">
-            <thead>
-              <tr>
-                <th scope="col">Tasks</th>
-                <th  scope="col">Subtasks</th>
-                <th  scope="col">Deadline</th>
-                <th  scope="col">Assignee</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr onclick="window.location='index.php'">
-                <tr><td>Setup</td>
-                    <td>Caterer Contact</td><td>10/09/2022</td>
-                    <td><img src="images/Ellipse 1.png" alt="lead profile image" class="profileImage"></td>
-                </tr>
-                <tr><td></td>
-                    <td>Venue Contact</td>
-                    <td>08/09/2022</td><td><img src="images/Ellipse 1.png" alt="lead profile image" class="profileImage"></td></tr>
-              </tr>
-              <tr onclick="window.location='index.php'">
-                <tr><td>Decoration</td>
-                    <td>Design</td><td>10/09/2022</td>
-                    <td><img src="images/Ellipse 1.png" alt="lead profile image" class="profileImage"></td>
-                </tr>
-                <tr><td></td>
-                    <td>Lights</td>
-                    <td>08/09/2022</td><td><img src="images/Ellipse 1.png" alt="lead profile image" class="profileImage"></td></tr>
-              </tr>
-            </tbody>
-          </table>
+    <body >
+
+    <?php
+        include 'C:\xampp\htdocs\DivItUp\classes\eventClass.php';
+        include 'C:\xampp\htdocs\DivItUp\classes\taskClass.php';
+        include 'dbconnect.php';
+        $tasks = Event:: getTasks($eventId, $connect);
+        // $query="SELECT task_id FROM task where event_id = ".$eventID;
+        // $result = mysql_query($query);
+
+        echo '<table class="table table-hover">
+               <thead>
+                  <tr>
+                    <th  scope="col">Summary</th>
+                    <th  scope="col">Deadline</th>
+                    <th  scope="col">Assignee</th>
+                  </tr>
+               </thead>';
+
+        echo'<tbody>';
+
+        foreach($tasks as $task){ 
+          $result= Task::readTask($task,$connect);
+
+            echo ' <button id="taskIdBut"><tr data-toggle="modal" data-target="#readTask">';
+            echo '<td id="tid"  hidden>' . $result->getId(). '</td>';
+            echo "<td >" . $result->getSummary(). "</td>";
+            echo "<td>" . $result->getDeadline() . "</td>";
+            // echo "<td>" . $result->getAssigneeEmail(). "</td>";
+            $assignee= User::readUser($result->getAssigneeEmail(),$connect);
+            echo "<td>" .'<img src="data:image/jpeg;base64,'.$assignee->getProfilePicture().'" class="imagesmol"/>'."</td>";
+            echo "</tr></button>";
+          
+        }
+
+                 
+        echo'</tbody>';
+
+              
+        echo'<table>';  
+
+      ?>
+
+   
+
+        <table class="table table-hover"> </table>
           <hr>
           <button type="button" class="add" data-toggle="modal" data-target="#exampleModal" onclick="document.getElementById('defaultOpen2').click()">
             Add Task +
@@ -61,6 +74,20 @@
           <!-- Modal -->
           <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <?php include "projectInfo/createTask.php" ?></div>
+          
+         <div class="modal fade" id="readTask" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <?php include "projectInfo/task.php" ?></div>
+         <script>
+            function formInput(){
+              alert("Is it working?");
+              const taskForm=document.getElementByID("formId");
+              var taskId=document.getElementByID("taskId").innerHTML=document.getElementByID("tid").value();
+              taskForm.submit();
+              // const subBut=document.getElementByID("subBut");
+            }
+            document.getElementById("taskIdBut").addEventListener("click", formInput);
+          </script>
+      
       
     </body>
 </html>

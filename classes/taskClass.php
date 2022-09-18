@@ -1,4 +1,4 @@
-<?php include 'commentClass.php' ?>
+<?php include 'commentsClass.php' ?>
 <?php
     class Task{
         private $id;
@@ -8,19 +8,18 @@
         private $deadline;
         private $status;
         private $eventId;
-        private $assigneeId;
+        private $assigneeEmail;
         private $report;
         private $comments = array();
 
-        function __construct($id, $summary, $startingTime, $deadline, $status, $eventId, $assigneeId){
+        function __construct($id, $summary, $startingTime, $deadline, $status, $eventId, $assigneeEmail){
             $this->id = $id;
             $this->summary = $summary;
-            $this->description = $description;
             $this->startingTime = $startingTime;
             $this->deadline = $deadline;
             $this->status = $status;
             $this->eventId = $eventId;
-            $this->assigneeId = $assigneeId;
+            $this->assigneeEmail = $assigneeEmail;
         }
 
         function getId(){
@@ -66,11 +65,11 @@
         //     $this->eventId = $eventId;
         // }
 
-        function getAssigneeId(){
-            return $this->assigneeId;
+        function getAssigneeEmail(){
+            return $this->assigneeEmail;
         }
-        function setEventId($assigneeId){
-            $this->assigneeId = $assigneeId;
+        function setEventId($assigneeEmail){
+            $this->assigneeEmail = $assigneeEmail;
         }
         function getReport(){
             return $this->report;
@@ -84,5 +83,20 @@
         function addComment($comment){
             array_push($this->comments, $comment);
         }
+   
+        public static function readTask($taskId, $connect){
+            $readQuery = $connect->prepare("SELECT * FROM task WHERE task_id = ?");
+            $readQuery->bind_param("i", $taskId);
+            $readQuery->execute();
+            $result = $readQuery->get_result()->fetch_assoc();
+            $task = new Task($result['task_id'], $result['summary'], $result['starting_time'], $result['deadline'], $result['status'], $result['event_id'], $result['email']);
+            $task->setDescription($result['description']);
+            // $event->setEventLogo($result['event_logo']);
+            $task->setStatus($result['status']);
+        
+            return $task;
+        }
+
+
     }
 ?>
