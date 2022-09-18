@@ -47,11 +47,11 @@
               
             </tbody>
           </table>
-          <script>
+          <!-- <script>
             function openEvent(){
               window.location
             }
-          </script>
+          </script> -->
       
     </body>
 </html>

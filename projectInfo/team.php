@@ -16,10 +16,17 @@
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+        <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@700&display=swap" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script defer src="projectInfo\addMemberValidation.js"></script>
           
         
     </head>
     <body >
+    <?php
+        
+    ?>
       
 
         <div class="tab">
@@ -28,15 +35,14 @@
             <button class="tablinks2" onclick="openSubTab(event, 'Active Status')">Active Status</button>
            
         </div> 
-        <form action="">
-            <div class="input-group" style="padding-top: 5px;margin-bottom:8px;">
-               <div id="search-autocomplete" class="form-outline">
-                 <input type="search" id="form1" class="form-control" placeholder="Add Member" />
-                </div>
-                <button type="button" class="btn btn-primary" >
-                  Add 
-                </button>
-             </div>
+        <form action="projectInfo\addMember.php" id="addMemberForm" method="post">
+            <label for="email" style = "color:red;font-size:12px" id = "emailErrorMessage"></label>
+            <input type="email" id="memberEmail" class="memberEmail" placeholder="Enter Email" name="memberEmail"/>
+            <input type="hidden" value = "<?php echo $eventId; ?>"id="eventId" name="eventId"/>
+            <label for="signUpButton" style = "color:red;font-size:12px" id = "emptyFieldsMessage" style="text-align: center"></label>
+            <button type="submit" class="btn btn-primary" id = "addMemberButton">
+              Add 
+             </button>
           </form>
                 
 

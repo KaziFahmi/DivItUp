@@ -21,12 +21,7 @@
         
     </head>
     <body >
-        <?php
-          include '../classes/eventClass.php';
-          $events = User::getEvents(, $connect);
-        ?>
-
-        <table class="table table-hover">
+          <table class="table table-hover">
             <thead>
               <tr>
                 <th scope="col">Project</th>
@@ -34,17 +29,27 @@
               </tr>
             </thead>
             <tbody>
-                <tr onclick="window.location='projectInfoPage.php'">
-                <td>Wedding Ceremony</td>
-                <td><img src="images/Ellipse 1.png" alt="lead profile image" class="profileImage"></td>
-              </tr>
-              <tr onclick="window.location='projectInfoPage.php'">
-                <td>Funeral </td>
-                <td><img src="images/Ellipse 1.png" alt="lead profile image" class="profileImage"></td>
-              </tr>
+              <?php foreach($events as $event){
+                if($event->getStatus() == 'complete'){
+                  $eventName = $event->getName();
+                  $eventId = $event->getId();
+                  $leadPic = User::readUser($event->getCreatorEmail(), $connect)->getProfilePicture();
+              ?>
+                <tr onclick="window.location='projectInfoPage.php?eventId='.concat(<?php echo $eventId?>)">
+                  <td><?php echo $eventName; ?></td>
+                  <td><?php echo '<img src="data:image/jpeg;base64,'.$leadPic.'" class="imagesmol"/>'; ?></td>
+                </tr>
+              <?php
+              }
+             } ?>
               
             </tbody>
           </table>
+          <!-- <script>
+            function openEvent(){
+              window.location
+            }
+          </script> -->
       
     </body>
 </html>

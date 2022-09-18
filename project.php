@@ -32,7 +32,6 @@
             $event = Event::readEvent($id, $connect);
             array_push($events, $event);
           }
-
         ?>
 
         <script>

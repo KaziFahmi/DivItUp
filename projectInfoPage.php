@@ -19,8 +19,18 @@
     </head>
     <body onload="document.getElementById('defaultOpen').click();" >
     <?php
-
-      include "navbar.php"
+      include "navbar.php";
+      $eventId = $_GET['eventId'];
+      $taskStructureId = 'defaultOpen';
+      $teamId = 'teamId';
+      if(isset($_GET['memberAdded']) && $_GET['memberAdded'] == 1){
+        $teamId = 'defaultOpen';
+        $taskStructureId = 'taskStructureId';
+      }
+      else{
+        $teamId = 'teamId';
+        $taskStructureId = 'defaultOpen';
+      }
     ?>
 
 <script>
@@ -30,9 +40,9 @@
     <h1>Wedding Ceremony</h1>
 
     <div class="tab">
-        <button class="tablinks" onclick="openTab(event, 'Task_Structure')" id="defaultOpen">Task Structure</button>
+        <button class="tablinks" onclick="openTab(event, 'Task_Structure')" id="<?php echo $taskStructureId ?>">Task Structure</button>
         <button class="tablinks" onclick="openTab(event, 'Board')">Board</button>
-        <button class="tablinks" onclick="openTab(event, 'Team'); document.getElementById('defaultOpen2').click();" >Team</button>
+        <button class="tablinks" id='<?php echo $teamId ?>' onclick="openTab(event, 'Team'); document.getElementById('defaultOpen2').click();">Team</button>
         <button class="tablinks" onclick="openTab(event, 'Expense');document.getElementById('defaultOpen3').click();">Expense</button>
         <button class="tablinks" onclick="openTab(event, 'Documents')">Documents</button>
         <button class="tablinks" onclick="openTab(event, 'Leaves')">Leave Management</button>
