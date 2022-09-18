@@ -21,6 +21,7 @@
   <?php
     include 'navbar.php';
     include 'dbconnect.php';
+    include 'classes/eventClass.php';
     $events = User:: getEvents($user->getEmail(), $connect);
   ?>
   
@@ -33,14 +34,13 @@
         <div class="dropdown">
           <button class="btn dropdown-toggle" type="button" data-toggle="dropdown" style="border: 1px solid gray ; margin-bottom: 4px;">Events
           <span class="caret"></span></button>
-          <?php
-             
-          ?>
           <ul class="dropdown-menu">
-            <li><a href="#">HTML</a></li>
-            <li><a href="#">CSS</a></li>
-            <li><a href="#">JavaScript</a></li>
-            <li><a href="#">JavaScript</a></li>
+          <li><a href="#"></a></li>
+            <?php foreach($events as $event){ 
+                $eventInfo = Event::readEvent($event, $connect);
+            ?>
+            <li><a href="#"><?php echo $eventInfo->getName(); ?></a></li>
+            <?php } ?>
           </ul>
         </div>
 

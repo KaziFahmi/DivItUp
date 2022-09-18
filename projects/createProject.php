@@ -11,12 +11,10 @@
         <script src="myFunction.js"></script>
         <script src="http://www.w3schools.com/lib/w3data.js"></script>
         
-        
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
-        <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
-        <script defer src="projectFormValidation.js"></script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     </head>
     <body >
       
@@ -38,70 +36,36 @@
                 <figcaption>Event Cover</figcaption>
               </figure> -->
                 <label for="projectName">Event Name</label><label style="color: red;">*</label><br>
-                <input type="text" id="projectName" name="projectName" size="48"><br>
-                <label for="">Summary</label><label style="color: red;">*</label><br>
-                <textarea id="summary" name="summary" rows="2" cols="50" placeholder="Enter summary"></textarea>
+                <input type="text" id="projectName" name="projectName" size="48" placeholder="Enter Event Name"><br>
+                <label for="">Description</label><label style="color: red;">*</label><br>
+                <textarea id="description" name="summary" rows="2" cols="50" placeholder="Enter summary"></textarea>
 
-                <div class="input-group" style="padding-top: 5px;">
-                  <div id="search-autocomplete" class="form-outline">
-                    <input type="text" id="department" class="form-control" placeholder="Add Deapartments" />
-                  </div>
-                  <button type="button" class="btn btn-primary" onclick= "">Add</button>
-                </div>
-                    
-                <!-- <button class="tablinks2" onclick="openSubTab(event, 'Team');" id="defaultOpen2">Team Members</button>
-                <button class="tablinks2" onclick="openSubTab(event, 'Department')">Departments</button>
-
-                <div id="Team" class="tabcontent2">
-                  <div class="input-group" style="padding-top: 5px;">
+                <div class="well clearfix">
                     <div id="search-autocomplete" class="form-outline">
-                      <input type="search" id="form1" class="form-control" placeholder="Add Members" />
+                        <input type="text" id="department" class="form-control" placeholder="Add Deapartments" />
                     </div>
-                    <button type="button" class="btn btn-primary">
-                     Add 
-                    </button>
-                  </div>
+                    <a class="btn btn-primary pull-right add-record" data-added="0">Add</a>
                 </div>
 
-                <div id="Department" class="tabcontent2" >
-                    <div class="input-group" style="padding-top: 5px;">
-                        <div id="search-autocomplete" class="form-outline">
-                          <input type="search" id="form1" class="form-control" placeholder="Add Deapartments" />
-                        </div>
-                        <button type="button" class="btn btn-primary">
-                         Add 
-                        </button>
-                      </div>
-                </div> -->
-
-                <div>
-                    <table class="table table-hover">
-                        <tr>
-                            <td>Shahil Yasar Haque</td>
-                        </tr>
-                    </table>
-                </div>
-
+                <table class="table table-hover" id="tbl_posts">
+                  <thead>
+                    <tr>
+                    </tr>
+                  </thead>
+                  <tbody id="tbl_posts_body">
+                    
+                  </tbody>
+                </table>
+                
                 <div style="display:none;">
-                  <table id="new_table">
-                    <tr id="">
-                      <td ></td>
+                    <table id="sample_table">
+                      <tr id="">
+                      <td><span class="sn"></span>.</td>
+                      <td id = "row_value"></td>
+                      <td style="float: right; padding-right: 5%"><a class="fa-solid fa-trash cngbtn delete-record" data-id="0"></a></td>
                     </tr>
                   </table>
                 </div>
-
-                <script>
-                  jQuery(document).delegate('a.add-record', 'click', function(e) {
-                    e.preventDefault();    
-                    var content = jQuery('#new_table tr'),
-                    size = jQuery('#tbl_posts >tbody >tr').length + 1,
-                    element = null,    
-                    element = content.clone();
-                    element.find('.delete-record').attr('data-id', size);
-                    element.appendTo('#tbl_posts_body');
-                    element.find('.sn').html(size);
-                  });
-                </script>
 
                 <div>
                     <label for="">Deadline</label><br>
@@ -109,10 +73,10 @@
                 </div>
 
                 <div class="modal-footer">
-                  <button type="submit" class="btn btn-primary" id="projectSubmit" onclick="changeImage()">Save changes</button>
+                <label for="projectSubmit" style = "color:red;font-size:12px" id = "emptyFieldsMessage" style="text-align: center"></label>
+                  <button type="submit" class="btn btn-primary" id="projectSubmit" data-toggle="modal" data-target="#exampleModal">Save changes</button>
                 </div>
               </form>
-
 
 
               </div>
@@ -120,5 +84,6 @@
             </div>
           </div>
       
+          <script src="projects\projectFormValidation.js"></script>
     </body>
 </html>
