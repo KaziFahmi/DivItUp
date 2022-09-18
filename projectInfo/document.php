@@ -1,5 +1,5 @@
 <html>
-    <head>
+    <!-- <head>
         <title>
             DivItup
         </title>
@@ -19,7 +19,7 @@
       
         
         
-    </head>
+    </head> -->
     <body >
         <table class="table table-hover">
             <thead>

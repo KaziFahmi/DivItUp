@@ -1,5 +1,5 @@
 <html>
-    <head>
+    <!-- <head>
         <title>
             DivItup
         </title>
@@ -19,7 +19,7 @@
       
         
         
-    </head>
+    </head> -->
     <body >
         <button type="button" class="add" data-toggle="modal" data-target="#exampleModal5">
             Add Board +

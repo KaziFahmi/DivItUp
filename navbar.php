@@ -1,5 +1,5 @@
 <html>
-  <head>
+  <!-- <head>
     <title>DivItup</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,7 +17,7 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
 
-  </head>
+  </head> -->
   <body>
   <?php
     include 'classes/userClass.php';

@@ -63,16 +63,10 @@ var t = 0;
     evt.currentTarget.className += " active";
 
   }
-  document.getElementById("defaultOpen").click();
-  document.getElementById("defaultOpen2").click();
-  document.getElementById("defaultOpen3").click();
 
-
-  
-
-
-
-
+  // document.getElementById("defaultOpen").click();
+  // document.getElementById("defaultOpen2").click();
+  // document.getElementById("defaultOpen3").click();
 
   function drag(ev) {
     ev.dataTransfer.setData("text", ev.target.id);

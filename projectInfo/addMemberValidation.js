@@ -1,4 +1,4 @@
-const form = document.getElementById('addMemberForm');
+const memberForm = document.getElementById('addMemberForm');
 const button = document.getElementById('addMemberButton');
 
 $('#addMemberButton').click(function(e) {
@@ -13,16 +13,15 @@ $('#addMemberButton').click(function(e) {
       else{
         $.ajax({
             type: "POST",
-            url: "../signup/checkEmail.php",
+            url: "signup/checkEmail.php",
             data: {email: $('#memberEmail').val()},
             success: function(result){
-              alert(result);
-              if(result.localeCompare("not unique") != 0){
+              if(result.localeCompare("unique") == 0){
               
                 $('#emailErrorMessage').html('*account does not exist');
               }
               else{
-                form.submit();
+                memberForm.submit();
               }
             }
           });
